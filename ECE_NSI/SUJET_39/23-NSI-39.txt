@@ -1,0 +1,158 @@
+BACCALAURÉAT 
+
+SESSION 2023 
+__________________ 
+
+Épreuve de l’enseignement de spécialité 
+
+NUMÉRIQUE et SCIENCES 
+INFORMATIQUES 
+
+Partie pratique 
+
+Classe Terminale de la voie générale 
+_________________ 
+
+Sujet n°39 
+__________________ 
+
+DURÉE DE L’ÉPREUVE : 1 heure 
+
+Le sujet comporte 3 pages numérotées de 1 / 3 à 3 / 3 
+Dès que le sujet vous est remis, assurez-vous qu’il est complet. 
+
+Le candidat doit traiter les 2 exercices. 
+
+ 1 / 3 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+EXERCICE 1 (4 points) 
+
+On s’intéresse à la suite d’entiers définie par : 
+
+les deux premiers termes sont égaux à 1, 
+
+ 
+  ensuite,  chaque  terme  est  obtenu  en  faisant  la  somme  des  deux  termes  qui  le 
+
+précèdent. 
+
+En mathématiques, on le formule ainsi : 
+
+u1 = 1, u2 = 1 et, pour tout entier naturel non nul n,  un+2 = un+1 + un. 
+
+Cette suite est connue sous le nom de suite de Fibonacci. 
+Écrire en Python une fonction fibonacci qui prend en paramètre un entier n supposé 
+strictement positif et qui renvoie le terme d’indice n de cette suite. 
+
+Exemples : 
+>>> fibonacci(1) 
+1 
+>>> fibonacci(2) 
+1 
+>>> fibonacci(25) 
+75025 
+>>> fibonacci(45) 
+1134903170 
+
+ 2 / 3 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+EXERCICE 2 (4 points) 
+
+On considère la fonction pantheon prenant en paramètres eleves et notes deux 
+tableaux de même longueur, le premier contenant le nom des élèves et le second, des 
+entiers positifs désignant leur note à un contrôle de sorte que eleves[i] a obtenu la 
+note notes[i]. 
+Cette fonction renvoie le couple constitué de la note maximale attribuée et des noms 
+des élèves ayant obtenu cette note regroupés dans un tableau. 
+Ainsi, l’instruction pantheon(['a', 'b', 'c', 'd'], [15,18,12,18]) renvoie 
+le couple (18, ['b', 'd']). 
+
+def pantheon(eleves, notes): 
+
+    note_maxi = 0 
+
+    meilleurs_eleves =  ... 
+
+    for i in range(...): 
+
+        if notes[i] == ...: 
+
+            meilleurs_eleves.append(...) 
+
+        elif notes[i] > note_maxi: 
+
+            note_maxi = ... 
+
+            meilleurs_eleves = [...]    
+
+    return (note_maxi, meilleurs_eleves) 
+
+Compléter ce code. 
+
+Exemples : 
+
+>>> eleves_nsi = ['a','b','c','d','e','f','g','h','i','j'] 
+
+>>> notes_nsi = [30, 40, 80, 60, 58, 80, 75, 80, 60, 24] 
+
+>>> pantheon(eleves_nsi, notes_nsi) 
+
+(80, ['c', 'f', 'h']) 
+
+>>> pantheon([],[]) 
+
+(0, []) 
+
+ 3 / 3 
+
+ 
+ 
+ 
+ 
+ 
+

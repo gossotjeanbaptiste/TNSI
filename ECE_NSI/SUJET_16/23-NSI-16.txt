@@ -1,0 +1,150 @@
+BACCALAURÉAT 
+
+SESSION 2023 
+__________________ 
+
+Épreuve de l’enseignement de spécialité 
+
+NUMÉRIQUE et SCIENCES 
+INFORMATIQUES 
+
+Partie pratique 
+
+Classe Terminale de la voie générale 
+_________________ 
+
+Sujet n°16 
+__________________ 
+
+DURÉE DE L’ÉPREUVE : 1 heure 
+
+Le sujet comporte 3 pages numérotées de 1 / 3 à 3 / 3 
+Dès que le sujet vous est remis, assurez-vous qu’il est complet. 
+
+Le candidat doit traiter les 2 exercices. 
+
+ 1 / 3 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+EXERCICE 1 (4 points) 
+
+Écrire une fonction recherche_indices_classement qui prend en paramètres un 
+entier elt et une liste d’entiers tab, et qui renvoie trois listes : 
+
+ 
+
+ 
+ 
+
+la première liste contient les indices des valeurs de la liste tab strictement 
+inférieures à elt ;  
+la deuxième liste contient les indices des valeurs de la liste tab égales à elt ; 
+la troisième liste contient les indices des valeurs de la liste tab strictement 
+supérieures à elt. 
+
+Exemples : 
+
+>>> recherche_indices_classement(3, [1, 3, 4, 2, 4, 6, 3, 0]) 
+([0, 3, 7], [1, 6], [2, 4, 5]) 
+
+>>> recherche_indices_classement(3, [1, 4, 2, 4, 6, 0]) 
+([0, 2, 5], [], [1, 3, 4]) 
+
+>>>recherche_indices_classement(3, [1, 1, 1, 1]) 
+([0, 1, 2, 3], [], []) 
+
+>>> recherche_indices_classement(3, []) 
+([], [], []) 
+
+ 2 / 3 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+EXERCICE 2 (4 points) 
+
+Un  professeur  de  NSI  décide  de  gérer  les  résultats  de  sa  classe  sous  la  forme  d’un 
+dictionnaire :  
+
+ 
+ 
+
+les clefs sont les noms des élèves ; 
+les valeurs sont des dictionnaires dont les clefs sont les types d’épreuves sous 
+forme de chaîne de caractères et les valeurs sont les notes obtenues associées à 
+leurs coefficients dans une liste. 
+
+Avec : 
+
+resultats = {'Dupont': { 
+
+                           'DS1': [15.5, 4], 
+                           'DM1': [14.5, 1], 
+                           'DS2': [13, 4], 
+                           'PROJET1': [16, 3], 
+                           'DS3': [14, 4] 
+                       }, 
+             'Durand': { 
+                           'DS1': [6 , 4], 
+                           'DM1': [14.5, 1], 
+                           'DS2': [8, 4], 
+                           'PROJET1': [9, 3], 
+                           'IE1': [7, 2], 
+                           'DS3': [8, 4], 
+                           'DS4':[15, 4] 
+                       } 
+            } 
+L’élève dont le nom est Durand a ainsi obtenu au DS2 la note de 8 avec un coefficient 4. 
+
+Le professeur crée une fonction moyenne qui prend en paramètre le nom d’un de ses 
+élèves et renvoie sa moyenne arrondie au dixième.  
+
+Compléter le code du professeur ci-dessous : 
+
+def moyenne(nom, dico_result): 
+    if nom in ...: 
+        notes = dico_result[nom] 
+        total_points = ... 
+        total_coefficients = ... 
+        for ...  in notes.values(): 
+            note, coefficient = valeurs 
+            total_points = total_points + ... * coefficient 
+            total_coefficients = ... + coefficient 
+        return round( ... / total_coefficients, 1 ) 
+    else: 
+        return -1 
+
+ 3 / 3 
+
+ 
+ 
+ 
+

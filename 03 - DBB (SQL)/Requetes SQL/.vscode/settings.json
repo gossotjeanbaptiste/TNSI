@@ -1,0 +1,6 @@
+{
+    "editor.fontLigatures": true,
+    "emmet.triggerExpansionOnTab": true,
+    "workbench.tree.indent": 12,
+    "editor.fontFamily": "'JetBrains Mono', 'Fira Code'"
+} 

@@ -1,0 +1,171 @@
+BACCALAURÉAT  
+
+SESSION 2023 
+_________________ 
+
+Épreuve de l’enseignement de spécialité 
+
+NUMÉRIQUE et SCIENCES 
+INFORMATIQUES 
+
+Partie pratique 
+
+Classe Terminale de la voie générale 
+_________________ 
+
+Sujet n°12 
+__________________ 
+
+DURÉE DE L'ÉPREUVE : 1 heure 
+
+Le sujet comporte 3 pages numérotées de 1 / 3 à 3 / 3 
+Dès que le sujet vous est remis, assurez-vous qu’il est complet. 
+
+Le candidat doit traiter les 2 exercices. 
+
+1 / 3 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+EXERCICE 1 (4 points) 
+
+On considère la classe ABR, dont le constructeur est le suivant :  
+
+def __init__(self, g0, v0, d0): 
+     self.gauche = g0 
+     self.cle = v0 
+     self.droit = d0 
+
+Ainsi, l’arbre binaire de recherche abr1 ci-
+contre  est  créé  par  le  code  python  ci-
+dessous :   
+
+n0 = ABR(None, 0, None) 
+n3 = ABR(None, 3, None) 
+n2 = ABR(None, 2, n3) 
+abr1 = ABR(n0, 1, n2) 
+
+Dans tout le code, None correspondra à un arbre vide. 
+
+La classe ABR dispose aussi d’une méthode de représentation, qui affiche entre 
+parenthèses le contenu du sous arbre gauche, puis la clé de l’arbre, et enfin le 
+contenu du sous arbre droit. Elle s’utilise en console de la manière suivante :   
+>>>abr1 
+((None,0,None),1,(None,2,(None,3,None))) 
+
+Écrire une fonction récursive ajoute(cle,a) qui prend en paramètres une clé cle 
+et un arbre binaire de recherche a, et qui renvoie un arbre binaire de recherche dans 
+lequel cle a été insérée. 
+Dans le cas où cle est déjà présente dans a, la fonction renvoie l’arbre a inchangé. 
+
+Résultats à obtenir : 
+>>> a = ajoute(4, abr1) 
+>>> a 
+((None,0,None),1,(None,2,(None,3,(None,4,None)))) 
+
+>>> ajoute(-5, abr1) 
+(((None,-5,None),0,None),1,(None,2,(None,3,None))) 
+
+>>> ajoute(2, abr1) 
+((None,0,None),1,(None,2,(None,3,None))) 
+
+2 / 3 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+EXERCICE 2 (4 points) 
+
+On dispose d’un ensemble d’objets dont on connaît, pour chacun, la masse. On 
+souhaite ranger l’ensemble de ces objets dans des boites identiques de telle 
+manière que la somme des masses des objets contenus dans une boîte ne dépasse 
+pas la capacité c de la boîte. On souhaite utiliser le moins de boîtes possibles pour 
+ranger cet ensemble d’objets. 
+
+Pour résoudre ce problème, on utilisera un algorithme glouton consistant à placer 
+chacun des objets dans la première boîte où cela est possible. 
+Par exemple, pour ranger dans des boîtes de capacité c = 5 un ensemble de trois 
+objets dont les masses sont représentées en Python par la liste[1, 5, 2], on 
+procède de la façon suivante : 
+
+-  Le premier objet, de masse 1, va dans une première boite. 
+-  Le deuxième objet, de masse 5, ne peut pas aller dans la même boite que le 
+premier objet car cela dépasserait la capacité de la boite. On place donc cet 
+objet dans une deuxième boîte. 
+
+-  Le troisième objet, de masse 2, va dans la première boîte. 
+
+On a donc utilisé deux boîtes de capacité c = 5 pour ranger les 3 objets. 
+
+Compléter la fonction Python empaqueter(liste_masses, c) suivante pour 
+qu’elle renvoie le nombre de boîtes de capacité c nécessaires pour empaqueter un 
+ensemble d’objets dont les masses sont contenues dans la liste liste_masses. 
+
+def empaqueter(liste_masses, c): 
+n = len(liste_masses) 
+nb_boites = 0 
+boites = [0]*n 
+for masse in ... : 
+
+i = 0 
+while i <= nb_boites and boites[i] + ... > C: 
+
+i = i + 1 
+
+if i == nb_boites + 1: 
+
+... 
+
+boites[i] = ... 
+return ... 
+
+Tester ensuite votre fonction : 
+>>>empaqueter([7, 6, 3, 4, 8, 5, 9, 2], 11) 
+5 
+
+3 / 3 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+      
+      
+           
+      
+           
+ 
+ 
+

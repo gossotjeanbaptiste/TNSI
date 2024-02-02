@@ -1,0 +1,144 @@
+BACCALAURÉAT 
+
+SESSION 2023 
+__________________ 
+
+Épreuve de l’enseignement de spécialité 
+
+NUMÉRIQUE et SCIENCES 
+INFORMATIQUES 
+
+Partie pratique 
+
+Classe Terminale de la voie générale 
+_________________ 
+
+Sujet n°30 
+__________________ 
+
+DURÉE DE L’ÉPREUVE : 1 heure 
+
+Le sujet comporte 3 pages numérotées de 1 / 3 à 3 / 3 
+Dès que le sujet vous est remis, assurez-vous qu’il est complet. 
+
+Le candidat doit traiter les 2 exercices. 
+
+ 1 / 3 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+EXERCICE 1 (4 points) 
+
+Écrire  une  fonction  moyenne  qui  prend  en  paramètre  un  tableau  non  vide  de  nombres 
+flottants  et  qui  renvoie  la  moyenne  des  valeurs  du  tableau.  Les  tableaux  seront 
+représentés sous forme de liste Python. 
+
+Exemples : 
+>>> moyenne([1.0]) 
+1.0 
+
+>>> moyenne([1.0, 2.0, 4.0]) 
+2.3333333333333335 
+
+ 2 / 3 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+EXERCICE 2 (4 points) 
+
+On considère la fonction binaire ci-dessous qui prend en paramètre un entier positif a  
+en  écriture  décimale.  Cette  fonction  renvoie  l’écriture  binaire  de  a  sous  la  forme  d'une 
+chaîne de caractères. 
+L’algorithme  utilise la méthode des divisions euclidiennes successives comme l’illustre 
+l’exemple ci-après. 
+
+def binaire(a): 
+    bin_a = ... 
+    a = a // 2 
+    while a ... : 
+        bin_a = ... + bin_a 
+        a = ... 
+    return bin_a 
+
+Compléter le code de la fonction binaire. 
+
+Exemples : 
+
+>>> binaire(83) 
+'1010011' 
+>>> binaire(127) 
+'1111111' 
+>>> binaire(0) 
+'0' 
+
+ 3 / 3 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+

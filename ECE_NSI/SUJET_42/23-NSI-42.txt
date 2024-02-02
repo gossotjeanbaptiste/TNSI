@@ -1,0 +1,142 @@
+BACCALAURÉAT 
+
+SESSION 2023 
+__________________ 
+
+Épreuve de l’enseignement de spécialité 
+
+NUMÉRIQUE et SCIENCES 
+INFORMATIQUES 
+
+Partie pratique 
+
+Classe Terminale de la voie générale 
+_________________ 
+
+Sujet n°42 
+__________________ 
+
+DURÉE DE L’ÉPREUVE : 1 heure 
+
+Le sujet comporte 3 pages numérotées de 1 / 3 à 3 / 3 
+Dès que le sujet vous est remis, assurez-vous qu’il est complet. 
+
+Le candidat doit traiter les 2 exercices. 
+
+ 1 / 3 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+EXERCICE 1 (4 points) 
+
+Écrire une fonction tri_selection qui prend en paramètre une liste tab de nombres 
+entiers et qui renvoie la liste triée par ordre croissant. Il est demandé de ne pas créer de 
+nouvelle liste mais de modifier celle fournie. 
+
+On utilisera l’algorithme suivant : 
+  on recherche le plus petit élément de la liste, en la parcourant du rang 0 au dernier 
+
+rang, et on l'échange avec l'élément d'indice 0 ; 
+
+  on recherche ensuite le plus petit élément de la liste restreinte du rang 1 au dernier 
+
+rang, et on l'échange avec l'élément d'indice 1 ;  
+
+  on continue de cette façon jusqu'à ce que la liste soit entièrement triée. 
+
+Exemple : 
+
+>>> tri_selection([1, 52, 6, -9, 12]) 
+[-9, 1, 6, 12, 52] 
+
+ 2 / 3 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+EXERCICE 2 (4 points) 
+
+Le jeu du « plus ou moins » consiste à deviner un nombre entier choisi entre 1 et 99. 
+
+Un élève de NSI décide de le coder en langage Python de la manière suivante : 
+
+le programme génère un nombre entier aléatoire compris entre 1 et 99 ; 
+
+ 
+  si la proposition de l’utilisateur est plus petite que le nombre cherché, l’utilisateur en 
+
+est averti. Il peut alors en tester un autre ; 
+
+  si la proposition de l’utilisateur est plus grande que le nombre cherché, l’utilisateur en 
+
+est averti. Il peut alors en tester un autre ; 
+
+  si l’utilisateur trouve le bon nombre en 10 essais ou moins, il gagne ; 
+  si l’utilisateur a fait plus de 10 essais sans trouver le bon nombre, il perd. 
+
+La fonction randint du module random est utilisée.  
+Si a et b sont des entiers tels que a <= b, randint(a, b) renvoie un nombre entier 
+compris entre a et b inclus. 
+
+Compléter le code ci-dessous et le tester :  
+
+from random import randint 
+
+def plus_ou_moins(): 
+    nb_mystere = randint(1, ...) 
+    nb_test = int(input("Proposez un nombre entre 1 et 99 : ")) 
+    compteur = ... 
+
+    while nb_mystere != ... and compteur < ...: 
+        compteur = compteur + ... 
+        if nb_mystere ... nb_test: 
+            nb_test = int(input("Trop petit ! Testez encore : ")) 
+        else: 
+            nb_test = int(input("Trop grand ! Testez encore : ")) 
+
+    if nb_mystere == nb_test: 
+        print("Bravo ! Le nombre était ", ...) 
+        print("Nombre d'essais: ", ...) 
+    else: 
+        print("Perdu ! Le nombre était ", ...) 
+
+ 3 / 3 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+

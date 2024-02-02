@@ -1,0 +1,32 @@
+[
+  {
+    "IdCinema": 1,
+    "Nom": "Ugc Ciné Cité",
+    "Ville": "Ludres",
+    "NombreSalles": 14
+  },
+  {
+    "IdCinema": 2,
+    "Nom": "CinéLun",
+    "Ville": "Lunéville",
+    "NombreSalles": 5
+  },
+  {
+    "IdCinema": 3,
+    "Nom": "KinéPolis",
+    "Ville": "Nancy",
+    "NombreSalles": 18
+  },
+  {
+    "IdCinema": 4,
+    "Nom": "Caméo",
+    "Ville": "Nancy",
+    "NombreSalles": 7
+  },
+  {
+    "IdCinema": 5,
+    "Nom": "L'Impérial",
+    "Ville": "Maxéville",
+    "NombreSalles": 5
+  }
+]

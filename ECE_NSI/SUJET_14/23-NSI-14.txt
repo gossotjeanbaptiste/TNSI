@@ -1,0 +1,126 @@
+BACCALAURÉAT 
+
+SESSION 2023 
+__________________ 
+
+Épreuve de l’enseignement de spécialité 
+
+NUMÉRIQUE et SCIENCES 
+INFORMATIQUES 
+
+Partie pratique 
+
+Classe Terminale de la voie générale 
+_________________ 
+
+Sujet n°14 
+__________________ 
+
+DURÉE DE L’ÉPREUVE : 1 heure 
+
+Le sujet comporte 3 pages numérotées de 1 / 3 à 3 / 3 
+Dès que le sujet vous est remis, assurez-vous qu’il est complet. 
+
+Le candidat doit traiter les 2 exercices. 
+
+ 1 / 3 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+EXERCICE 1 (4 points) 
+
+Écrire une fonction recherche qui prend en paramètres un nombre entier elt et un 
+tableau tab de nombres entiers, et qui renvoie l’indice de la première occurrence de 
+elt dans tab si elt est dans tab et -1 sinon. 
+
+Ne pas oublier d’ajouter au corps de la fonction une documentation et une ou plusieurs 
+assertions pour vérifier les pré-conditions. 
+
+Exemples : 
+
+>>> recherche(1, [2, 3, 4]) 
+-1 
+>>> recherche(1, [10, 12, 1, 56]) 
+2 
+>>> recherche(50, [1, 50, 1]) 
+1 
+>>> recherche(15, [8, 9, 10, 15]) 
+3 
+>>> recherche(50, []) 
+-1 
+>>> recherche(4, [2, 4, 4, 3, 4]) 
+1 
+
+ 2 / 3 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+EXERCICE 2 (4 points) 
+
+On considère la fonction  insere ci-dessous qui prend en  arguments un entier a et un 
+tableau tab d'entiers triés par ordre croissant. Cette fonction crée et renvoie un nouveau 
+tableau  à  partir  de  celui  fourni  en  paramètre  en  y  insérant  la  valeur  a  de  sorte  que  le 
+tableau renvoyé soit encore trié par ordre croissant. Les tableaux seront représentés sous 
+la forme de listes Python. 
+
+def insere(a, tab): 
+    """ Insère l'élément a (int) dans le tableau tab (list) 
+        trié par ordre croissant à sa place et renvoie le 
+        nouveau tableau. """ 
+    l = list(tab) #l contient les mêmes éléments que tab 
+    l.append(a) 
+    i = ... 
+    while a < ... and i >= 0:  
+      l[i+1] = ... 
+      l[i] = a 
+      i = ... 
+    return l 
+
+Compléter la fonction insere ci-dessus. 
+
+Exemples : 
+
+>>> insere(3, [1, 2, 4, 5]) 
+[1, 2, 3, 4, 5] 
+>>> insere(30, [1, 2, 7, 12, 14, 25]) 
+[1, 2, 7, 12, 14, 25, 30] 
+>>> insere(1, [2, 3, 4]) 
+[1, 2, 3, 4] 
+>>> insere(1, []) 
+[1] 
+
+ 3 / 3 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+

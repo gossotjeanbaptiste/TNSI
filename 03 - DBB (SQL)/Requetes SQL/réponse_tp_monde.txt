@@ -1,0 +1,1081 @@
+2a) 
+
++-----------------+
+| Tables_in_monde |
++-----------------+
+| city            |
+| country         |
+| countrylanguage |
++-----------------+
+
+2b) 
+
+DESCRIBE City;
++-------------+----------+------+-----+---------+----------------+
+| Field       | Type     | Null | Key | Default | Extra          |
++-------------+----------+------+-----+---------+----------------+
+| ID          | int      | NO   | PRI | NULL    | auto_increment |
+| Name        | char(35) | NO   |     |         |                |
+| CountryCode | char(3)  | NO   |     |         |                |
+| District    | char(20) | NO   |     |         |                |
+| Population  | int      | NO   |     | 0       |                |
++-------------+----------+------+-----+---------+----------------+
+
+DESCRIBE Country;
++----------------+---------------------------------------------------------------------------------------+------+-----+---------+-------+
+| Field          | Type                                                                                  | Null | Key | Default | Extra |
++----------------+---------------------------------------------------------------------------------------+------+-----+---------+-------+
+| Code           | char(3)                                                                               | NO   | PRI |         |       |
+| Name           | char(52)                                                                              | NO   |     |         |       |
+| Continent      | enum('Asia','Europe','North America','Africa','Oceania','Antarctica','South America') | NO   |     | Asia    |       |
+| Region         | char(26)                                                                              | NO   |     |         |       |
+| SurfaceArea    | float(10,2)                                                                           | NO   |     | 0.00    |       |
+| IndepYear      | smallint                                                                              | YES  |     | NULL    |       |
+| Population     | int                                                                                   | NO   |     | 0       |       |
+| LifeExpectancy | float(3,1)                                                                            | YES  |     | NULL    |       |
+| GNP            | float(10,2)                                                                           | YES  |     | NULL    |       |
+| GNPOld         | float(10,2)                                                                           | YES  |     | NULL    |       |
+| LocalName      | char(45)                                                                              | NO   |     |         |       |
+| GovernmentForm | char(45)                                                                              | NO   |     |         |       |
+| HeadOfState    | char(60)                                                                              | YES  |     | NULL    |       |
+| Capital        | int                                                                                   | YES  |     | NULL    |       |
+| Code2          | char(2)                                                                               | NO   |     |         |       |
++----------------+---------------------------------------------------------------------------------------+------+-----+---------+-------+
+
+DESCRIBE CountryLanguage;
++-------------+---------------+------+-----+---------+-------+
+| Field       | Type          | Null | Key | Default | Extra |
++-------------+---------------+------+-----+---------+-------+
+| CountryCode | char(3)       | NO   | PRI |         |       |
+| Language    | char(30)      | NO   | PRI |         |       |
+| IsOfficial  | enum('T','F') | NO   |     | F       |       |
+| Percentage  | float(4,1)    | NO   |     | 0.0     |       |
++-------------+---------------+------+-----+---------+-------+
+
+3a) 
+
++------------------+
+| name             |
++------------------+
+| Argentina        |
+| Bolivia          |
+| Brazil           |
+| Chile            |
+| Ecuador          |
+| Falkland Islands |
+| Guyana           |
+| Colombia         |
+| Paraguay         |
+| Peru             |
+| French Guiana    |
+| Suriname         |
+| Uruguay          |
+| Venezuela        |
++------------------+
+
+3b) 
+
++----------+
+| count(*) |
++----------+
+|      239 |
++----------+
+
+3c)
+
++--------------------------------+
+| count(DISTINCT GovernmentForm) |
++--------------------------------+
+|                             36 |
++--------------------------------+
+
+3d) 
+(avec >= 2000000)
++---------------+
+| Name          |
++---------------+
+| London        |
+| Madrid        |
+| Roma          |
+| Paris         |
+| Bucuresti     |
+| Berlin        |
+| Kyiv          |
+| Moscow        |
+| St Petersburg |
++---------------+
+
+3e)
+
++--------------------+
+| name               |
++--------------------+
+| Paraná             |
+| Pabna              |
+| Parakou            |
+| Paulista           |
+| Passo Fundo        |
+| Parnaíba           |
+| Paranaguá          |
+| Palmas             |
+| Patos de Minas     |
+| Passos             |
+| Paulo Afonso       |
+| Parnamirim         |
+| Patos              |
+| Palhoça            |
+| Palma de Mallorca  |
+| Pamplona [Iruña]   |
+| Paarl              |
+| Pasig              |
+| Parañaque          |
+| Pasay              |
+| Pagadian           |
+| Panabo             |
+| Palembang          |
+| Padang             |
+| Palu               |
+| Pasuruan           |
+| Pangkal Pinang     |
+| Palangka Raya      |
+| Padang Sidempuan   |
+| Patna              |
+| Panihati           |
+| Patiala            |
+| Panipat            |
+| Parbhani           |
+| Pali               |
+| Pathankot          |
+| Palghat (Palakkad) |
+| Pallavaram         |
+| Palayankottai      |
+| Patan              |
+| Palermo            |
+| Padova             |
+| Parma              |
+| Pavlodar           |
+| Panzhihua          |
+| Panjin             |
+| Pasto              |
+| Palmira            |
+| Paju               |
+| Patras             |
+| Panevezys          |
+| Pachuca de Soto    |
+| Papantla           |
+| Pánuco             |
+| Palikir            |
+| Pagakku (Pakokku)  |
+| Pak Pattan         |
+| Paris              |
+| Papeete            |
+| Paderborn          |
+| Paramaribo         |
+| Panchiao           |
+| Pate               |
+| Pak Kret           |
+| Pardubice          |
+| Pavlograd          |
+| Paterson           |
+| Pasadena           |
+| Pasadena           |
+| Paradise           |
+| Palmdale           |
++--------------------+
+
+3f) 
+
++---------------------------+
+| Name                      |
++---------------------------+
+| Andorra                   |
+| Belgium                   |
+| Burundi                   |
+| Guadeloupe                |
+| Haiti                     |
+| Italy                     |
+| Canada                    |
+| Lebanon                   |
+| Luxembourg                |
+| Madagascar                |
+| Martinique                |
+| Mauritius                 |
+| Mayotte                   |
+| Monaco                    |
+| France                    |
+| French Polynesia          |
+| Rwanda                    |
+| Saint Pierre and Miquelon |
+| Sao Tome and Principe     |
+| Seychelles                |
+| Switzerland               |
+| New Caledonia             |
+| Vanuatu                   |
+| United States             |
+| Virgin Islands. U.S.      |
++---------------------------+
+
+3g) 
+
++-----------+
+| name      |
++-----------+
+| Argentina |
+| Brazil    |
+| Chile     |
+| Ecuador   |
+| Colombia  |
+| Peru      |
+| Venezuela |
++-----------+
+
+3h)
+
++------------------+-------------+
+| Name             | SurfaceArea |
++------------------+-------------+
+| French Polynesia |     4000.00 |
++------------------+-------------+
+
+3i)
+
++-----------------+
+| AVG(Population) |
++-----------------+
+|   72647562.7451 |
++-----------------+
+
+3j)
+
++----------+
+| COUNT(*) |
++----------+
+|        7 |
++----------+
+
+3k)
+
++------------------------------+
+| COUNT(DISTINCT Country.Name) |
++------------------------------+
+|                          232 |
++------------------------------+
+
+3l)
+
++------------------------------+------+
+| Name                         | code |
++------------------------------+------+
+| Montréal                     | CAN  |
+| Calgary                      | CAN  |
+| Toronto                      | CAN  |
+| North York                   | CAN  |
+| Winnipeg                     | CAN  |
+| Edmonton                     | CAN  |
+| Mississauga                  | CAN  |
+| Scarborough                  | CAN  |
+| Vancouver                    | CAN  |
+| Etobicoke                    | CAN  |
+| London                       | CAN  |
+| Hamilton                     | CAN  |
+| Ottawa                       | CAN  |
+| Laval                        | CAN  |
+| Surrey                       | CAN  |
+| Brampton                     | CAN  |
+| Windsor                      | CAN  |
+| Saskatoon                    | CAN  |
+| Kitchener                    | CAN  |
+| Markham                      | CAN  |
+| Regina                       | CAN  |
+| Burnaby                      | CAN  |
+| Québec                       | CAN  |
+| York                         | CAN  |
+| Richmond                     | CAN  |
+| Vaughan                      | CAN  |
+| Burlington                   | CAN  |
+| Oshawa                       | CAN  |
+| Oakville                     | CAN  |
+| Saint Catharines             | CAN  |
+| Longueuil                    | CAN  |
+| Richmond Hill                | CAN  |
+| Thunder Bay                  | CAN  |
+| Nepean                       | CAN  |
+| Cape Breton                  | CAN  |
+| East York                    | CAN  |
+| Halifax                      | CAN  |
+| Cambridge                    | CAN  |
+| Gloucester                   | CAN  |
+| Abbotsford                   | CAN  |
+| Guelph                       | CAN  |
+| Saint John´s                 | CAN  |
+| Coquitlam                    | CAN  |
+| Saanich                      | CAN  |
+| Gatineau                     | CAN  |
+| San José                     | CRI  |
+| La Habana                    | CUB  |
+| Santiago de Cuba             | CUB  |
+| Camagüey                     | CUB  |
+| Holguín                      | CUB  |
+| Santa Clara                  | CUB  |
+| Guantánamo                   | CUB  |
+| Pinar del Río                | CUB  |
+| Bayamo                       | CUB  |
+| Cienfuegos                   | CUB  |
+| Victoria de las Tunas        | CUB  |
+| Matanzas                     | CUB  |
+| Manzanillo                   | CUB  |
+| Sancti-Spíritus              | CUB  |
+| Santo Domingo de Guzmán      | DOM  |
+| Santiago de los Caballeros   | DOM  |
+| La Romana                    | DOM  |
+| San Pedro de Macorís         | DOM  |
+| San Francisco de Macorís     | DOM  |
+| Ciudad de Guatemala          | GTM  |
+| Mixco                        | GTM  |
+| Villa Nueva                  | GTM  |
+| Tegucigalpa                  | HND  |
+| San Pedro Sula               | HND  |
+| Ciudad de México             | MEX  |
+| Guadalajara                  | MEX  |
+| Ecatepec de Morelos          | MEX  |
+| Puebla                       | MEX  |
+| Nezahualcóyotl               | MEX  |
+| Juárez                       | MEX  |
+| Tijuana                      | MEX  |
+| León                         | MEX  |
+| Monterrey                    | MEX  |
+| Zapopan                      | MEX  |
+| Naucalpan de Juárez          | MEX  |
+| Mexicali                     | MEX  |
+| Culiacán                     | MEX  |
+| Acapulco de Juárez           | MEX  |
+| Tlalnepantla de Baz          | MEX  |
+| Mérida                       | MEX  |
+| Chihuahua                    | MEX  |
+| San Luis Potosí              | MEX  |
+| Guadalupe                    | MEX  |
+| Toluca                       | MEX  |
+| Aguascalientes               | MEX  |
+| Querétaro                    | MEX  |
+| Morelia                      | MEX  |
+| Hermosillo                   | MEX  |
+| Saltillo                     | MEX  |
+| Torreón                      | MEX  |
+| Centro (Villahermosa)        | MEX  |
+| San Nicolás de los Garza     | MEX  |
+| Durango                      | MEX  |
+| Chimalhuacán                 | MEX  |
+| Tlaquepaque                  | MEX  |
+| Atizapán de Zaragoza         | MEX  |
+| Veracruz                     | MEX  |
+| Cuautitlán Izcalli           | MEX  |
+| Irapuato                     | MEX  |
+| Tuxtla Gutiérrez             | MEX  |
+| Tultitlán                    | MEX  |
+| Reynosa                      | MEX  |
+| Benito Juárez                | MEX  |
+| Matamoros                    | MEX  |
+| Xalapa                       | MEX  |
+| Celaya                       | MEX  |
+| Mazatlán                     | MEX  |
+| Ensenada                     | MEX  |
+| Ahome                        | MEX  |
+| Cajeme                       | MEX  |
+| Cuernavaca                   | MEX  |
+| Tonalá                       | MEX  |
+| Valle de Chalco Solidaridad  | MEX  |
+| Nuevo Laredo                 | MEX  |
+| Tepic                        | MEX  |
+| Tampico                      | MEX  |
+| Ixtapaluca                   | MEX  |
+| Apodaca                      | MEX  |
+| Guasave                      | MEX  |
+| Gómez Palacio                | MEX  |
+| Tapachula                    | MEX  |
+| Nicolás Romero               | MEX  |
+| Coatzacoalcos                | MEX  |
+| Uruapan                      | MEX  |
+| Victoria                     | MEX  |
+| Oaxaca de Juárez             | MEX  |
+| Coacalco de Berriozábal      | MEX  |
+| Pachuca de Soto              | MEX  |
+| General Escobedo             | MEX  |
+| Salamanca                    | MEX  |
+| Santa Catarina               | MEX  |
+| Tehuacán                     | MEX  |
+| Chalco                       | MEX  |
+| Cárdenas                     | MEX  |
+| Campeche                     | MEX  |
+| La Paz                       | MEX  |
+| Othón P. Blanco (Chetumal)   | MEX  |
+| Texcoco                      | MEX  |
+| La Paz                       | MEX  |
+| Metepec                      | MEX  |
+| Monclova                     | MEX  |
+| Huixquilucan                 | MEX  |
+| Chilpancingo de los Bravo    | MEX  |
+| Puerto Vallarta              | MEX  |
+| Fresnillo                    | MEX  |
+| Ciudad Madero                | MEX  |
+| Soledad de Graciano Sánchez  | MEX  |
+| San Juan del Río             | MEX  |
+| San Felipe del Progreso      | MEX  |
+| Córdoba                      | MEX  |
+| Tecámac                      | MEX  |
+| Ocosingo                     | MEX  |
+| Carmen                       | MEX  |
+| Lázaro Cárdenas              | MEX  |
+| Jiutepec                     | MEX  |
+| Papantla                     | MEX  |
+| Comalcalco                   | MEX  |
+| Zamora                       | MEX  |
+| Nogales                      | MEX  |
+| Huimanguillo                 | MEX  |
+| Cuautla                      | MEX  |
+| Minatitlán                   | MEX  |
+| Poza Rica de Hidalgo         | MEX  |
+| Ciudad Valles                | MEX  |
+| Navolato                     | MEX  |
+| San Luis Río Colorado        | MEX  |
+| Pénjamo                      | MEX  |
+| San Andrés Tuxtla            | MEX  |
+| Guanajuato                   | MEX  |
+| Navojoa                      | MEX  |
+| Zitácuaro                    | MEX  |
+| Boca del Río                 | MEX  |
+| Allende                      | MEX  |
+| Silao                        | MEX  |
+| Macuspana                    | MEX  |
+| San Juan Bautista Tuxtepec   | MEX  |
+| San Cristóbal de las Casas   | MEX  |
+| Valle de Santiago            | MEX  |
+| Guaymas                      | MEX  |
+| Colima                       | MEX  |
+| Dolores Hidalgo              | MEX  |
+| Lagos de Moreno              | MEX  |
+| Piedras Negras               | MEX  |
+| Altamira                     | MEX  |
+| Túxpam                       | MEX  |
+| San Pedro Garza García       | MEX  |
+| Cuauhtémoc                   | MEX  |
+| Manzanillo                   | MEX  |
+| Iguala de la Independencia   | MEX  |
+| Zacatecas                    | MEX  |
+| Tlajomulco de Zúñiga         | MEX  |
+| Tulancingo de Bravo          | MEX  |
+| Zinacantepec                 | MEX  |
+| San Martín Texmelucan        | MEX  |
+| Tepatitlán de Morelos        | MEX  |
+| Martínez de la Torre         | MEX  |
+| Orizaba                      | MEX  |
+| Apatzingán                   | MEX  |
+| Atlixco                      | MEX  |
+| Delicias                     | MEX  |
+| Ixtlahuaca                   | MEX  |
+| El Mante                     | MEX  |
+| Lerdo                        | MEX  |
+| Almoloya de Juárez           | MEX  |
+| Acámbaro                     | MEX  |
+| Acuña                        | MEX  |
+| Guadalupe                    | MEX  |
+| Huejutla de Reyes            | MEX  |
+| Hidalgo                      | MEX  |
+| Los Cabos                    | MEX  |
+| Comitán de Domínguez         | MEX  |
+| Cunduacán                    | MEX  |
+| Río Bravo                    | MEX  |
+| Temapache                    | MEX  |
+| Chilapa de Alvarez           | MEX  |
+| Hidalgo del Parral           | MEX  |
+| San Francisco del Rincón     | MEX  |
+| Managua                      | NIC  |
+| León                         | NIC  |
+| Ciudad de Panamá             | PAN  |
+| San Miguelito                | PAN  |
+| San Juan                     | PRI  |
+| Bayamón                      | PRI  |
+| Ponce                        | PRI  |
+| Carolina                     | PRI  |
+| Caguas                       | PRI  |
+| Arecibo                      | PRI  |
+| Guaynabo                     | PRI  |
+| San Salvador                 | SLV  |
+| Santa Ana                    | SLV  |
+| Mejicanos                    | SLV  |
+| Soyapango                    | SLV  |
+| San Miguel                   | SLV  |
+| New York                     | USA  |
+| Los Angeles                  | USA  |
+| Chicago                      | USA  |
+| Houston                      | USA  |
+| Philadelphia                 | USA  |
+| Phoenix                      | USA  |
+| San Diego                    | USA  |
+| Dallas                       | USA  |
+| San Antonio                  | USA  |
+| Detroit                      | USA  |
+| San Jose                     | USA  |
+| Indianapolis                 | USA  |
+| San Francisco                | USA  |
+| Jacksonville                 | USA  |
+| Columbus                     | USA  |
+| Austin                       | USA  |
+| Baltimore                    | USA  |
+| Memphis                      | USA  |
+| Milwaukee                    | USA  |
+| Boston                       | USA  |
+| Washington                   | USA  |
+| Nashville-Davidson           | USA  |
+| El Paso                      | USA  |
+| Seattle                      | USA  |
+| Denver                       | USA  |
+| Charlotte                    | USA  |
+| Fort Worth                   | USA  |
+| Portland                     | USA  |
+| Oklahoma City                | USA  |
+| Tucson                       | USA  |
+| New Orleans                  | USA  |
+| Las Vegas                    | USA  |
+| Cleveland                    | USA  |
+| Long Beach                   | USA  |
+| Albuquerque                  | USA  |
+| Kansas City                  | USA  |
+| Fresno                       | USA  |
+| Virginia Beach               | USA  |
+| Atlanta                      | USA  |
+| Sacramento                   | USA  |
+| Oakland                      | USA  |
+| Mesa                         | USA  |
+| Tulsa                        | USA  |
+| Omaha                        | USA  |
+| Minneapolis                  | USA  |
+| Honolulu                     | USA  |
+| Miami                        | USA  |
+| Colorado Springs             | USA  |
+| Saint Louis                  | USA  |
+| Wichita                      | USA  |
+| Santa Ana                    | USA  |
+| Pittsburgh                   | USA  |
+| Arlington                    | USA  |
+| Cincinnati                   | USA  |
+| Anaheim                      | USA  |
+| Toledo                       | USA  |
+| Tampa                        | USA  |
+| Buffalo                      | USA  |
+| Saint Paul                   | USA  |
+| Corpus Christi               | USA  |
+| Aurora                       | USA  |
+| Raleigh                      | USA  |
+| Newark                       | USA  |
+| Lexington-Fayette            | USA  |
+| Anchorage                    | USA  |
+| Louisville                   | USA  |
+| Riverside                    | USA  |
+| Saint Petersburg             | USA  |
+| Bakersfield                  | USA  |
+| Stockton                     | USA  |
+| Birmingham                   | USA  |
+| Jersey City                  | USA  |
+| Norfolk                      | USA  |
+| Baton Rouge                  | USA  |
+| Hialeah                      | USA  |
+| Lincoln                      | USA  |
+| Greensboro                   | USA  |
+| Plano                        | USA  |
+| Rochester                    | USA  |
+| Glendale                     | USA  |
+| Akron                        | USA  |
+| Garland                      | USA  |
+| Madison                      | USA  |
+| Fort Wayne                   | USA  |
+| Fremont                      | USA  |
+| Scottsdale                   | USA  |
+| Montgomery                   | USA  |
+| Shreveport                   | USA  |
+| Augusta-Richmond County      | USA  |
+| Lubbock                      | USA  |
+| Chesapeake                   | USA  |
+| Mobile                       | USA  |
+| Des Moines                   | USA  |
+| Grand Rapids                 | USA  |
+| Richmond                     | USA  |
+| Yonkers                      | USA  |
+| Spokane                      | USA  |
+| Glendale                     | USA  |
+| Tacoma                       | USA  |
+| Irving                       | USA  |
+| Huntington Beach             | USA  |
+| Modesto                      | USA  |
+| Durham                       | USA  |
+| Columbus                     | USA  |
+| Orlando                      | USA  |
+| Boise City                   | USA  |
+| Winston-Salem                | USA  |
+| San Bernardino               | USA  |
+| Jackson                      | USA  |
+| Little Rock                  | USA  |
+| Salt Lake City               | USA  |
+| Reno                         | USA  |
+| Newport News                 | USA  |
+| Chandler                     | USA  |
+| Laredo                       | USA  |
+| Henderson                    | USA  |
+| Arlington                    | USA  |
+| Knoxville                    | USA  |
+| Amarillo                     | USA  |
+| Providence                   | USA  |
+| Chula Vista                  | USA  |
+| Worcester                    | USA  |
+| Oxnard                       | USA  |
+| Dayton                       | USA  |
+| Garden Grove                 | USA  |
+| Oceanside                    | USA  |
+| Tempe                        | USA  |
+| Huntsville                   | USA  |
+| Ontario                      | USA  |
+| Chattanooga                  | USA  |
+| Fort Lauderdale              | USA  |
+| Springfield                  | USA  |
+| Springfield                  | USA  |
+| Santa Clarita                | USA  |
+| Salinas                      | USA  |
+| Tallahassee                  | USA  |
+| Rockford                     | USA  |
+| Pomona                       | USA  |
+| Metairie                     | USA  |
+| Paterson                     | USA  |
+| Overland Park                | USA  |
+| Santa Rosa                   | USA  |
+| Syracuse                     | USA  |
+| Kansas City                  | USA  |
+| Hampton                      | USA  |
+| Lakewood                     | USA  |
+| Vancouver                    | USA  |
+| Irvine                       | USA  |
+| Aurora                       | USA  |
+| Moreno Valley                | USA  |
+| Pasadena                     | USA  |
+| Hayward                      | USA  |
+| Brownsville                  | USA  |
+| Bridgeport                   | USA  |
+| Hollywood                    | USA  |
+| Warren                       | USA  |
+| Torrance                     | USA  |
+| Eugene                       | USA  |
+| Pembroke Pines               | USA  |
+| Salem                        | USA  |
+| Pasadena                     | USA  |
+| Escondido                    | USA  |
+| Sunnyvale                    | USA  |
+| Savannah                     | USA  |
+| Fontana                      | USA  |
+| Orange                       | USA  |
+| Naperville                   | USA  |
+| Alexandria                   | USA  |
+| Rancho Cucamonga             | USA  |
+| Grand Prairie                | USA  |
+| East Los Angeles             | USA  |
+| Fullerton                    | USA  |
+| Corona                       | USA  |
+| Flint                        | USA  |
+| Paradise                     | USA  |
+| Mesquite                     | USA  |
+| Sterling Heights             | USA  |
+| Sioux Falls                  | USA  |
+| New Haven                    | USA  |
+| Topeka                       | USA  |
+| Concord                      | USA  |
+| Evansville                   | USA  |
+| Hartford                     | USA  |
+| Fayetteville                 | USA  |
+| Cedar Rapids                 | USA  |
+| Elizabeth                    | USA  |
+| Lansing                      | USA  |
+| Lancaster                    | USA  |
+| Fort Collins                 | USA  |
+| Coral Springs                | USA  |
+| Stamford                     | USA  |
+| Thousand Oaks                | USA  |
+| Vallejo                      | USA  |
+| Palmdale                     | USA  |
+| Columbia                     | USA  |
+| El Monte                     | USA  |
+| Abilene                      | USA  |
+| North Las Vegas              | USA  |
+| Ann Arbor                    | USA  |
+| Beaumont                     | USA  |
+| Waco                         | USA  |
+| Macon                        | USA  |
+| Independence                 | USA  |
+| Peoria                       | USA  |
+| Inglewood                    | USA  |
+| Springfield                  | USA  |
+| Simi Valley                  | USA  |
+| Lafayette                    | USA  |
+| Gilbert                      | USA  |
+| Carrollton                   | USA  |
+| Bellevue                     | USA  |
+| West Valley City             | USA  |
+| Clarksville                  | USA  |
+| Costa Mesa                   | USA  |
+| Peoria                       | USA  |
+| South Bend                   | USA  |
+| Downey                       | USA  |
+| Waterbury                    | USA  |
+| Manchester                   | USA  |
+| Allentown                    | USA  |
+| McAllen                      | USA  |
+| Joliet                       | USA  |
+| Lowell                       | USA  |
+| Provo                        | USA  |
+| West Covina                  | USA  |
+| Wichita Falls                | USA  |
+| Erie                         | USA  |
+| Daly City                    | USA  |
+| Citrus Heights               | USA  |
+| Norwalk                      | USA  |
+| Gary                         | USA  |
+| Berkeley                     | USA  |
+| Santa Clara                  | USA  |
+| Green Bay                    | USA  |
+| Cape Coral                   | USA  |
+| Arvada                       | USA  |
+| Pueblo                       | USA  |
+| Sandy                        | USA  |
+| Athens-Clarke County         | USA  |
+| Cambridge                    | USA  |
+| Westminster                  | USA  |
+| San Buenaventura             | USA  |
+| Portsmouth                   | USA  |
+| Livonia                      | USA  |
+| Burbank                      | USA  |
++------------------------------+------+
+
+3m) 
+
++------------------------------+
+| COUNT(DISTINCT Country.Name) |
++------------------------------+
+|                          232 |
++------------------------------+
+
+3n)
+
++----------------------+----------------+
+| Name                 | LifeExpectancy |
++----------------------+----------------+
+| Afghanistan          |           45.9 |
+| East Timor           |           46.0 |
+| Bhutan               |           52.4 |
+| Laos                 |           53.1 |
+| Myanmar              |           54.9 |
+| Cambodia             |           56.5 |
+| Nepal                |           57.8 |
+| Yemen                |           59.8 |
+| Bangladesh           |           60.2 |
+| Turkmenistan         |           60.9 |
+| Pakistan             |           61.1 |
+| Maldives             |           62.2 |
+| India                |           62.5 |
+| Azerbaijan           |           62.9 |
+| Kazakstan            |           63.2 |
+| Kyrgyzstan           |           63.4 |
+| Uzbekistan           |           63.7 |
+| Tajikistan           |           64.1 |
+| Georgia              |           64.5 |
+| Armenia              |           66.4 |
+| Iraq                 |           66.5 |
+| Mongolia             |           67.3 |
+| Philippines          |           67.5 |
+| Saudi Arabia         |           67.8 |
+| Indonesia            |           68.0 |
+| Syria                |           68.5 |
+| Thailand             |           68.6 |
+| Vietnam              |           69.3 |
+| Iran                 |           69.7 |
+| North Korea          |           70.7 |
+| Malaysia             |           70.8 |
+| Turkey               |           71.0 |
+| Lebanon              |           71.3 |
+| China                |           71.4 |
+| Palestine            |           71.4 |
+| Oman                 |           71.8 |
+| Sri Lanka            |           71.8 |
+| Qatar                |           72.4 |
+| Bahrain              |           73.0 |
+| Brunei               |           73.6 |
+| United Arab Emirates |           74.1 |
+| South Korea          |           74.4 |
+| Kuwait               |           76.1 |
+| Taiwan               |           76.4 |
+| Cyprus               |           76.7 |
+| Jordan               |           77.4 |
+| Israel               |           78.6 |
+| Hong Kong            |           79.5 |
+| Singapore            |           80.1 |
+| Japan                |           80.7 |
+| Macao                |           81.6 |
++----------------------+----------------+
+
+3o)
+
++--------------------+------------------+
+| Name               | COUNT(City.Name) |
++--------------------+------------------+
+| Argentina          |               57 |
+| Brazil             |              250 |
+| United Kingdom     |               81 |
+| Spain              |               59 |
+| Philippines        |              136 |
+| Indonesia          |               85 |
+| India              |              341 |
+| Iran               |               67 |
+| Italy              |               58 |
+| Japan              |              248 |
+| China              |              363 |
+| South Korea        |               70 |
+| Mexico             |              173 |
+| Nigeria            |               64 |
+| Pakistan           |               59 |
+| Germany            |               93 |
+| Turkey             |               62 |
+| Ukraine            |               57 |
+| Russian Federation |              189 |
+| United States      |              274 |
++--------------------+------------------+
+
++---------------------------------------+
+| Name                                  |
++---------------------------------------+
+| Afghanistan                           |
+| Netherlands                           |
+| Albania                               |
+| Algeria                               |
+| Angola                                |
+| United Arab Emirates                  |
+| Argentina                             |
+| Armenia                               |
+| Australia                             |
+| Azerbaijan                            |
+| Bahamas                               |
+| Bahrain                               |
+| Bangladesh                            |
+| Belgium                               |
+| Benin                                 |
+| Bolivia                               |
+| Bosnia and Herzegovina                |
+| Botswana                              |
+| Brazil                                |
+| United Kingdom                        |
+| Bulgaria                              |
+| Burkina Faso                          |
+| Burundi                               |
+| Chile                                 |
+| Costa Rica                            |
+| Djibouti                              |
+| Dominican Republic                    |
+| Ecuador                               |
+| Egypt                                 |
+| El Salvador                           |
+| Eritrea                               |
+| Spain                                 |
+| South Africa                          |
+| Ethiopia                              |
+| Philippines                           |
+| Gabon                                 |
+| Gambia                                |
+| Georgia                               |
+| Ghana                                 |
+| Guatemala                             |
+| Guinea                                |
+| Guinea-Bissau                         |
+| Guyana                                |
+| Haiti                                 |
+| Honduras                              |
+| Hong Kong                             |
+| Indonesia                             |
+| India                                 |
+| Iraq                                  |
+| Iran                                  |
+| Ireland                               |
+| Iceland                               |
+| Israel                                |
+| Italy                                 |
+| Austria                               |
+| Jamaica                               |
+| Japan                                 |
+| Yemen                                 |
+| Jordan                                |
+| Yugoslavia                            |
+| Cambodia                              |
+| Cameroon                              |
+| Canada                                |
+| Kazakstan                             |
+| Kenya                                 |
+| Central African Republic              |
+| China                                 |
+| Kyrgyzstan                            |
+| Colombia                              |
+| Congo                                 |
+| Congo, The Democratic Republic of the |
+| North Korea                           |
+| South Korea                           |
+| Greece                                |
+| Croatia                               |
+| Cuba                                  |
+| Kuwait                                |
+| Cyprus                                |
+| Laos                                  |
+| Latvia                                |
+| Lesotho                               |
+| Lebanon                               |
+| Liberia                               |
+| Libyan Arab Jamahiriya                |
+| Lithuania                             |
+| Western Sahara                        |
+| Macao                                 |
+| Madagascar                            |
+| Macedonia                             |
+| Malawi                                |
+| Malaysia                              |
+| Mali                                  |
+| Morocco                               |
+| Mauritania                            |
+| Mauritius                             |
+| Mexico                                |
+| Moldova                               |
+| Mongolia                              |
+| Mozambique                            |
+| Myanmar                               |
+| Namibia                               |
+| Nepal                                 |
+| Nicaragua                             |
+| Niger                                 |
+| Nigeria                               |
+| Norway                                |
+| Côte d’Ivoire                         |
+| Oman                                  |
+| Pakistan                              |
+| Panama                                |
+| Papua New Guinea                      |
+| Paraguay                              |
+| Peru                                  |
+| Portugal                              |
+| Puerto Rico                           |
+| Poland                                |
+| Qatar                                 |
+| France                                |
+| Réunion                               |
+| Romania                               |
+| Rwanda                                |
+| Sweden                                |
+| Germany                               |
+| Zambia                                |
+| Saudi Arabia                          |
+| Senegal                               |
+| Sierra Leone                          |
+| Singapore                             |
+| Slovakia                              |
+| Slovenia                              |
+| Somalia                               |
+| Sri Lanka                             |
+| Sudan                                 |
+| Finland                               |
+| Suriname                              |
+| Switzerland                           |
+| Syria                                 |
+| Tajikistan                            |
+| Taiwan                                |
+| Tanzania                              |
+| Denmark                               |
+| Thailand                              |
+| Togo                                  |
+| Chad                                  |
+| Czech Republic                        |
+| Tunisia                               |
+| Turkey                                |
+| Turkmenistan                          |
+| Uganda                                |
+| Ukraine                               |
+| Hungary                               |
+| Uruguay                               |
+| New Zealand                           |
+| Uzbekistan                            |
+| Belarus                               |
+| Venezuela                             |
+| Russian Federation                    |
+| Vietnam                               |
+| Estonia                               |
+| United States                         |
+| Zimbabwe                              |
+| Palestine                             |
++---------------------------------------+
+
+3q) 
+
++--------------------+----------------------+
+| Name               | SUM(City.Population) |
++--------------------+----------------------+
+| Argentina          |             19996563 |
+| Australia          |             11313666 |
+| Brazil             |             85876862 |
+| Canada             |             12673840 |
+| China              |            175953614 |
+| Colombia           |             20250990 |
+| Egypt              |             20083079 |
+| Germany            |             26245483 |
+| India              |            123298526 |
+| Indonesia          |             37485695 |
+| Iran               |             26032990 |
+| Italy              |             15087019 |
+| Japan              |             77965107 |
+| Mexico             |             59752521 |
+| Nigeria            |             17366900 |
+| Pakistan           |             31546745 |
+| Peru               |             12147242 |
+| Philippines        |             30934791 |
+| Poland             |             11687431 |
+| Russian Federation |             69150700 |
+| Saudi Arabia       |             10636700 |
+| South Africa       |             15196370 |
+| South Korea        |             38999893 |
+| Spain              |             16669189 |
+| Taiwan             |             13569336 |
+| Turkey             |             28327028 |
+| Ukraine            |             20074000 |
+| United Kingdom     |             22436673 |
+| United States      |             78625774 |
+| Venezuela          |             12251091 |
++--------------------+----------------------+
+
+3r) 
+
++---------------------------+
+| Name                      |
++---------------------------+
+| Andorra                   |
+| Belgium                   |
+| Burundi                   |
+| Canada                    |
+| France                    |
+| French Polynesia          |
+| Guadeloupe                |
+| Haiti                     |
+| Italy                     |
+| Lebanon                   |
+| Luxembourg                |
+| Madagascar                |
+| Martinique                |
+| Mauritius                 |
+| Mayotte                   |
+| Monaco                    |
+| New Caledonia             |
+| Rwanda                    |
+| Saint Pierre and Miquelon |
+| Sao Tome and Principe     |
+| Seychelles                |
+| Switzerland               |
+| United States             |
+| Vanuatu                   |
+| Virgin Islands. U.S.      |
++---------------------------+

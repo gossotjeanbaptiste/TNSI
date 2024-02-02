@@ -1,0 +1,125 @@
+BACCALAURÉAT  
+
+SESSION 2023 
+__________________ 
+
+Épreuve de l’enseignement de spécialité 
+
+NUMÉRIQUE et SCIENCES 
+INFORMATIQUES 
+
+Partie pratique 
+
+Classe Terminale de la voie générale 
+_________________ 
+
+Sujet n°24 
+__________________ 
+
+DURÉE DE L’ÉPREUVE : 1 heure 
+
+Le sujet comporte 3 pages numérotées de 1 / 3 à 3 / 3 
+Dès que le sujet vous est remis, assurez-vous qu’il est complet. 
+
+Le candidat doit traiter les 2 exercices. 
+
+ 1 / 3 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+EXERCICE 1 (4 points) 
+
+Le nombre d’occurrences d’un caractère dans une chaîne de caractère est le nombre 
+d’apparitions de ce caractère dans la chaîne. 
+
+Exemples :  
+
+ 
+ 
+ 
+ 
+
+le nombre d’occurrences du caractère ‘o’ dans ‘bonjour’ est 2 ; 
+le nombre d’occurrences du caractère ‘b’ dans ‘Bébé’ est 1 ; 
+le nombre d’occurrences du caractère ‘B’ dans ‘Bébé’ est 1 ; 
+le nombre d’occurrences du caractère ‘ ‘ dans ‘Hello world !’ est 2. 
+
+On cherche le nombre d’occurrences des caractères dans une chaîne de caractères. On 
+souhaite stocker ces nombres d’occurrences dans un dictionnaire dont les clefs seraient 
+les caractères de la chaîne et les valeurs le nombre d’occurrences de ces caractères. 
+
+Par exemple : avec la phrase 'Hello world !' le dictionnaire est le suivant :  
+
+{'H': 1, 'e': 1, 'l': 3, 'o': 2, ' ': 2, 'w': 1, 
+
+ 'r': 1, 'd': 1, '!': 1} 
+
+L’ordre des clefs n’a pas d’importance. 
+
+Écrire  une  fonction  nbr_occurrences  prenant  comme  paramètre  une  chaîne  de 
+caractères  chaine  et  renvoyant  le  dictionnaire  des  nombres  d’occurrences  des 
+caractères de cette chaîne. 
+
+ 2 / 3 
+
+ 
+ 
+ 
+ 
+ 
+EXERCICE 2 (4 points) 
+
+La fonction fusion prend deux listes L1, L2 d’entiers triées par ordre croissant et les 
+fusionne en une liste triée L12 qu’elle renvoie. 
+
+Le code Python de la fonction fusion est  
+
+def fusion(lst1, lst2): 
+    n1 = len(lst1) 
+    n2 = len(L2) 
+    lst12 = [0] * (n1 + n2) 
+    i1 = 0 
+    i2 = 0 
+    i = 0 
+    while i1 < n1 and ... : 
+        if lst1[i1] < lst2[i2]: 
+            lst12[i] = ... 
+            i1 = ... 
+        else: 
+            lst12[i] = lst2[i2] 
+            i2 = ... 
+        i += 1 
+    while i1 < n1: 
+      lst12[i] = ... 
+      i1 = i1 + 1 
+      i = ... 
+    while i2 < n2: 
+      lst12[i] = ... 
+      i2 = i2 + 1 
+      i = ... 
+    return lst12 
+
+Compléter le code. 
+
+Exemple : 
+
+>>> fusion([1, 6, 10], [0, 7, 8, 9]) 
+[0, 1, 6, 7, 8, 9, 10] 
+
+ 3 / 3 
+
+ 
+ 
+ 
+ 
+ 
+ 
+

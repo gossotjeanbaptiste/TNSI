@@ -1,0 +1,17 @@
+[{"IdFilm": 1,
+  "Nom": "L'armée des douzes singes",
+  "DateDeSortie": "05/10/1995"
+},
+{"IdFilm": 2,
+"Nom": "Contagion",
+"DateDeSortie": "06/12/2011"
+},
+{"IdFilm": 3,
+"Nom": "28 jours plus tard",
+"DateDeSortie": "10/02/2002"
+},
+{"IdFilm": 4,
+"Nom": "World War Z",
+"DateDeSortie": "10/02/2013"
+}
+]

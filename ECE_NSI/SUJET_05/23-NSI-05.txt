@@ -1,0 +1,168 @@
+BACCALAURÉAT 
+
+SESSION 2023 
+__________________ 
+
+Épreuve de l’enseignement de spécialité 
+
+NUMÉRIQUE et SCIENCES 
+INFORMATIQUES 
+
+Partie pratique 
+
+Classe Terminale de la voie générale 
+_________________ 
+
+Sujet n°05 
+__________________ 
+
+DURÉE DE L’ÉPREUVE : 1 heure 
+
+Le sujet comporte 3 pages numérotées de 1 / 3 à 3 / 3 
+Dès que le sujet vous est remis, assurez-vous qu’il est complet. 
+
+Le candidat doit traiter les 2 exercices. 
+
+ 1 / 3 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+EXERCICE 1 (4 points) 
+
+Écrire en python deux fonctions : 
+
+  lancer de paramètre n, un entier positif, qui renvoie un tableau de type list de 
+
+n entiers obtenus aléatoirement entre 1 et 6 (1 et 6 inclus) ; 
+
+  paire_6  de paramètre tab, un tableau de type list de n entiers entre 1 et 
+6 obtenus aléatoirement, qui renvoie un booléen égal à True si le nombre de 6 
+est supérieur ou égal à 2, False sinon. 
+
+On pourra utiliser la fonction randint(a,b)du module random pour laquelle la 
+documentation officielle est la suivante : 
+
+Renvoie un entier aléatoire N tel que a <=N <= b. 
+
+Exemples : 
+>>> lancer1 = lancer(5) 
+[5, 6, 6, 2, 2] 
+>>> paire_6(lancer1) 
+True 
+>>> lancer2 = lancer(5) 
+[6, 5, 1, 6, 6] 
+>>> paire_6(lancer2) 
+True 
+>>> lancer3 = lancer(3) 
+[2, 2, 6] 
+>>> paire_6(lancer3) 
+False 
+>>> lancer4 = lancer(0) 
+[] 
+>>> paire_6(lancer4) 
+False 
+
+EXERCICE 2 (4 points) 
+
+On  considère  une  image  en  256  niveaux  de  gris  que  l’on  représente  par  une  grille  de 
+nombres, c’est-à-dire une liste composée de sous-listes toutes de longueurs identiques. 
+
+La largeur de l’image est donc la longueur d’une sous-liste et la hauteur de l’image est le 
+nombre de sous-listes. 
+
+Chaque sous-liste représente une ligne de l’image et chaque élément des sous-listes est 
+un entier compris entre 0 et 255, représentant l’intensité lumineuse du pixel. 
+
+Le négatif d’une image est l’image constituée des pixels x_n tels que 
+
+ x_n + x_i = 255 où x_i est le pixel correspondant de l’image initiale. 
+
+Compléter le programme proposé page suivante : 
+
+ 2 / 3 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+def nbLig(image): 
+    '''renvoie le nombre de lignes de l'image''' 
+    return ... 
+
+def nbCol(image): 
+    '''renvoie la largeur de l'image''' 
+    return ... 
+
+def negatif(image): 
+    '''renvoie le négatif de l'image sous la forme  
+       d'une liste de listes''' 
+
+    # on créé une image de 0 aux mêmes dimensions que le paramètre 
+image 
+    L = [[0 for k in range(nbCol(image))] for i in range(nbLig(image))] 
+
+    for i in range(nbLig(image)): 
+        for j in range(...): 
+            L[i][j] = ... 
+    return L 
+
+def binaire(image, seuil): 
+    '''renvoie une image binarisée de l'image sous la forme  
+       d'une liste de listes contenant des 0 si la valeur  
+       du pixel est strictement inférieure au seuil  
+       et 1 sinon''' 
+
+    # on crée une image de 0 aux mêmes dimensions que le paramètre 
+image 
+    L = [[0 for k in range(nbCol(image))] for i in range(nbLig(image))] 
+
+    for i in range(nbLig(image)): 
+        for j in range(...): 
+            if image[i][j] < ... : 
+                L[i][j] = ... 
+            else: 
+                L[i][j] = ... 
+    return L 
+
+Exemples :  
+
+>>> img=[[20, 34, 254, 145, 6], [23, 124, 237, 225, 69], [197, 174, 
+207, 25, 87], [255, 0, 24, 197, 189]] 
+>>> nbLig(img) 
+4 
+>>> nbCol(img) 
+5 
+>>> negatif(img) 
+[[235, 221, 1, 110, 249], [232, 131, 18, 30, 186], [58, 81, 48, 230, 
+168], [0, 255, 231, 58, 66]] 
+>>> binaire(img,120) 
+[[0, 0, 1, 1, 0], [0, 1, 1, 1, 0], [1, 1, 1, 0, 0], [1, 0, 0, 1, 1]] 
+
+ 3 / 3 
+
+ 
+ 
+ 
+ 
+ 
+ 
+     
+ 
+ 
+ 
+ 
+

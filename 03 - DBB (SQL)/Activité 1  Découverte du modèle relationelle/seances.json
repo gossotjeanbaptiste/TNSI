@@ -1,0 +1,41 @@
+[{"IdSeance": 1,
+  "Horaire": "14h00",
+  "IdFilm": 3,
+  "IdCinema": 3
+},
+{"IdSeance": 2,
+  "Horaire": "10h00",
+  "IdFilm": 2,
+  "IdCinema": 1
+},
+{"IdSeance": 3,
+  "Horaire": "17h00",
+  "IdFilm": 2,
+  "IdCinema": 2
+},
+{"IdSeance": 4,
+  "Horaire": "14h00",
+  "IdFilm": 1,
+  "IdCinema": 1
+},
+{"IdSeance": 5,
+  "Horaire": "11h30",
+  "IdFilm": 3,
+  "IdCinema": 2
+},
+{"IdSeance": 6,
+  "Horaire": "16h00",
+  "IdFilm": 1,
+  "IdCinema": 5
+},
+{"IdSeance": 6,
+  "Horaire": "21h00",
+  "IdFilm": 3,
+  "IdCinema": 5
+},
+{"IdSeance": 7,
+  "Horaire": "14h00",
+  "IdFilm": 2,
+  "IdCinema": 2
+}
+]
