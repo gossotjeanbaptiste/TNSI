@@ -105,4 +105,5 @@ def parcours_profondeur(G, v):
                     a_visiter.append(voisin)
     return visites
 
-print(parcours_profondeur(michel, "1"))
+print(parcours_profondeur(michel, "1")) #psartek michel <3
+
