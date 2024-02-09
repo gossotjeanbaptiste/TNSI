@@ -9,7 +9,7 @@ michel = {"1": ["2", "5", "8"],
           "6": [],
           "7": ["6"],
           "8": ["7"]
-          }
+          } #graphe orienté ex1
 
 # Répresentation d'un graphe sous forme de liste d'adjancence
 
@@ -67,6 +67,19 @@ def parcours_largeur(graph, depart):
 
     return resultat
 
+def parcours_largeur2(G, v):
+    visites = deque(v)
+    a_visiter = deque(voisins(G, v))
+    while a_visiter:
+        #pour une file utiliser popleft() pour retirer le premier élément
+        sommet = a_visiter.popleft()
+        if sommet not in visites:
+            visites.append(sommet)
+            for voisin in voisins(G, sommet):
+                if voisin not in visites:
+                    a_visiter.append(voisin)
+    return visites
+
 # Exemple d'utilisation
 # Supposons que le graphe soit représenté par une liste d'adjacence
 # graph = {0: [1, 2], 1: [3, 4], 2: [5], 3: [], 4: [6], 5: [], 6: []}
@@ -80,7 +93,7 @@ graph = {0: [1, 2], 1: [3, 4], 2: [5], 3: [], 4: [6], 5: [], 6: []}
 print(parcours_largeur(graph, 0))
 
 
-def parcours_largeur2(G, v):
+def parcours_profondeur(G, v):
     visites = deque(v)
     a_visiter = deque(voisins(G, v))
     while a_visiter:
@@ -91,3 +104,5 @@ def parcours_largeur2(G, v):
                 if voisin not in visites:
                     a_visiter.append(voisin)
     return visites
+
+print(parcours_profondeur(michel, "1"))
