@@ -89,8 +89,8 @@ def parcours_largeur2(G, v):
 # Sortie: [0, 1, 2, 3, 4, 5, 6]
 
 
-graph = {0: [1, 2], 1: [3, 4], 2: [5], 3: [], 4: [6], 5: [], 6: []}
-print(parcours_largeur(graph, 0))
+#graph = {0: [1, 2], 1: [3, 4], 2: [5], 3: [], 4: [6], 5: [], 6: []}
+#print(parcours_largeur(graph, 0))
 
 
 def parcours_profondeur(G, v):
@@ -106,4 +106,5 @@ def parcours_profondeur(G, v):
     return visites
 
 print(parcours_profondeur(michel, "1")) #psartek michel <3
+print(parcours_largeur2(michel, "1"))
 
