@@ -15,7 +15,7 @@ def dichotomie(tab, valeur):
 test = [3*i+8 for i in range(10000)]
 
 assert dichotomie(test, 1626) == -1, 'Attention pb test 1'
-print('test 1 ok')
+print(f'test 1 ok -> {dichotomie(test, 1626)}')
 
 assert dichotomie(test, 1526) == 506, 'Attention pb test 2'
 print(f'test 2 ok --> {dichotomie(test, 1526)}')
