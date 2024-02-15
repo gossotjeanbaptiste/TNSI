@@ -49,7 +49,7 @@ G = nx.Graph()
 carte_couleur = [i for i in coloriage_glouton(G).values()]
 
 """('SES', 'SVT'): 8  ---> ('SES', 'SVT', 8) """
-link = [(cle[0], cle[1], valeur) for cle, valeur in couple_spe.items()]
+link = [(cle[0], cle[1], valeur) for cle, valeur in couple_spe.items() if valeur > 2]
 
 G.add_nodes_from(['HGGSP', 'HLP', 'LLCE', 'Maths',
                  'NSI', 'PH-CH', 'SES', 'SVT'])
