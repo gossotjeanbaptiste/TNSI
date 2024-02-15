@@ -23,9 +23,9 @@ def coloriage_glouton(graphe):
     return couleur
         
 
-carte_couleur = [0, 1, 2, 1, 2, 0, 1, 2]
-#nx.draw(G, node_color=carte_couleur, with_labels=True, font_weight='bold')
-#plt.show()
+carte_couleur = [i for i in coloriage_glouton(G).values()]
+nx.draw(G, node_color=carte_couleur, with_labels=True, font_weight='bold')
+plt.show()
 
 #fait par IA
 
