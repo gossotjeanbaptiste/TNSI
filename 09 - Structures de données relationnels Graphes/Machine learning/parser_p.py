@@ -1,3 +1,7 @@
+import json
+
+    
+    
 def analyseur(phrase):
     dico = {}
     phrase_splite = phrase.split(' ')
@@ -18,9 +22,12 @@ test = "Il y a des jours et il y a la journée, NSI SNT. Il convient de se prép
 
 fichier = open("henri.txt", "r", encoding="utf-8")
 lines = fichier.readlines()
-dico = analyseur(test)
+dico = analyseur(fichier.readline().strip('\n'))
 
 for line in lines:
     analyseur(line.strip('\n'))
+    
+with open('resultats.json', 'w+') as json_file:
+    json.dump(dico, json_file)
 
 print(dico)
