@@ -33,4 +33,4 @@ Apprentisage des commandes essentiels du shell, gérer des processus (ordonnance
 Vu du slicing et du découpage de tableau pour formuler l'algorithme de tri le plus rapide : le tri fusion, ou faire de manière plus rapide le calcul d'une puissance d'un chiffre
 
 ## 09 - Structures de données relationnels Graphes
-Introduction à la notion de graphe et de matrice pour utiliser des graphes matricielles, introduction des graphes pondérés, contuinité informatique du cours de Maths Experts 
+Introduction à la notion de graphe et de matrice pour utiliser des graphes matricielles, introduction des graphes pondérés, continuité informatique du cours de Maths Experts 
