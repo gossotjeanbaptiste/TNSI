@@ -4,3 +4,5 @@ pip install scipy
 pip install matplotlib
 pip install jupyter
 pip install Flask
+pip install colorama
+pip install icecream
