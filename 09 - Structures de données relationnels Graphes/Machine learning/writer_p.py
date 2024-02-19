@@ -1,10 +1,12 @@
-from random import randint
+from random import randint, choices
 # from icecream import ic
 import json
+from gtts import gTTS
+import os
 
 with open('resultats.json', 'r', encoding='utf-8') as json_file:
     data = json.load(json_file)
-#print(data)
+# print(data)
 
 dico = {"ordinateur": 2, "alliance": 1, "oui": 4}
 
@@ -12,7 +14,7 @@ dico = {"ordinateur": 2, "alliance": 1, "oui": 4}
 def joker():
     # version temporaire à améliorer
     # return un mot au hasard
-    return "joker"
+    return choices(list(data.keys()))[0]
 
 
 def next_word(dico):
@@ -39,7 +41,7 @@ for i in range(5):
         depart = next_word(data[depart])
     else:
         depart = joker()
-    
+
 print(phrase)
 
 '''
@@ -47,3 +49,8 @@ for _ in range(50):
     print(next_word(dico))
     print("-----")
 '''
+text = 'Mathéo va travailler !'
+language = 'fr'
+obj = gTTS(text=text, lang=language, slow=False)
+obj.save("output.mp3")
+os.system("start output.mp3")

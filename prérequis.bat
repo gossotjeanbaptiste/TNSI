@@ -6,3 +6,5 @@ pip install jupyter
 pip install Flask
 pip install colorama
 pip install icecream
+pip install gTTS
+pip install tkinter
