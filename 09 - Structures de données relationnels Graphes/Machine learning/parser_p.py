@@ -20,7 +20,7 @@ def analyseur(phrase):
             else:
                 dico[mot][mot_suivant] =1
  
-test = "Il y a des jours et il y a la journée, NSI SNT. Il convient de se préparer pour cette journée pleine d’échanges."
+#test = "Il y a des jours et il y a la journée, NSI SNT. Il convient de se préparer pour cette journée pleine d’échanges."
  
 for line in lines:
     analyseur(line.strip('\n'))

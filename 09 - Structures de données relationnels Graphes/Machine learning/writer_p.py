@@ -3,6 +3,7 @@ from random import randint, choices
 import json
 from gtts import gTTS
 import os
+from parser_p import *
 
 with open('resultats.json', 'r', encoding='utf-8') as json_file:
     data = json.load(json_file)
@@ -48,9 +49,37 @@ print(phrase)
 for _ in range(50):
     print(next_word(dico))
     print("-----")
-'''
+
+
 text = 'Mathéo va travailler !'
 language = 'fr'
 obj = gTTS(text=text, lang=language, slow=False)
 obj.save("output.mp3")
 os.system("start output.mp3")
+'''
+
+def  generer_phrase():
+    phrase = ''
+    depart = 'je'
+    for i in range(10):
+        phrase += depart + ' '
+        if depart in data.keys():
+            depart = next_word(data[depart])
+        else:
+            depart = joker()
+    return phrase
+
+#apprentisage par renforcement
+for _ in range(10):
+    phrase = generer_phrase()
+    print(phrase)
+    note = int(input("Notez cette phrase de 0 à 5 : "))
+    if note > 3:
+        #on recalcule les probabilités on parse la phrase et on met à jour le dictionnaire
+        analyseur(phrase)
+    else:
+        #on corrige la phrase	
+        phrase = input("Entrez une phrase correcte : ")
+        #on parse la phrase et on met à jour le dictionnaire
+        # on parse la phrase et on met à jour le dictionnaire
+        analyseur(phrase)
