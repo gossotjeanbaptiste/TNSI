@@ -17,12 +17,14 @@ def delta_ia(liste):
         res.append(liste[i] - liste[i-1])
     return res
 
+
 print("Fonction delta faite par IA")
 print(delta_ia([1000, 800, 802, 1000, 1003]))
 print(delta_ia([42]))
 print('-----------------------------')
 
-def delta(liste):
+
+def delta_ece(liste):
     resultat = []
     if liste == []:
         return None
@@ -32,6 +34,7 @@ def delta(liste):
             resultat.append(liste[i+1] - liste[i])
     return resultat
 
-print('Fonction delta faites par l\'humain')
-print(delta([1000, 800, 802, 1000, 1003]))
-print(delta([42]))
+
+print('Fonction delta faites par l\'humain en ECE')
+print(delta_ece([1000, 800, 802, 1000, 1003]))
+print(delta_ece([42]))
