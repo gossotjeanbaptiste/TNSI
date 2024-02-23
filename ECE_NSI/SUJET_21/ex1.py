@@ -1,6 +1,6 @@
 
 '''
-    Le codage par différence (delta encoding en anglais) permet de compresser un tableau
+Le codage par différence (delta encoding en anglais) permet de compresser un tableau
 de données en indiquant pour chaque donnée, sa différence avec la précédente (plutôt
 que la donnée elle-même). On se retrouve alors avec un tableau de données plus petit,
 nécessitant donc moins de place en mémoire. Cette méthode se révèle efficace lorsque
