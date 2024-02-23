@@ -30,7 +30,7 @@ def affiche_gras(chaine, motif):
         else:
             print(chaine[i], end='')
             i += 1
-    
+    ``
 print(recherche_textuelle_naif("GTAATCAAATCTTGCCAATCAATC", 'AATC')) # [2, 7, 16]
 affiche_gras("GTAATCAAATCTTGCCAATCAATC", 'AATC')  
     
