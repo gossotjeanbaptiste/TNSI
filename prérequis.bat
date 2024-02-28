@@ -7,3 +7,4 @@ pip install colorama
 pip install icecream
 pip install gTTS
 pip install tkinter
+pip install pygame
