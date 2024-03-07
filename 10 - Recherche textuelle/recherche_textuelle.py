@@ -15,10 +15,8 @@ def recherche_textuelle_naif(chaine, motif):
     return resultat
 
 
-
-
 def affiche_gras(chaine, motif):
-    #écrire une fonction affichegras(motif, chaine) qui affiche en gras le motif à chaque fois qu’il est présent dans la chaîne
+    # écrire une fonction affichegras(motif, chaine) qui affiche en gras le motif à chaque fois qu’il est présent dans la chaîne
     resultat = recherche_textuelle_naif(chaine, motif)
     n = len(chaine)
     m = len(motif)
@@ -30,10 +28,13 @@ def affiche_gras(chaine, motif):
         else:
             print(chaine[i], end='')
             i += 1
-    ``
-print(recherche_textuelle_naif("GTAATCAAATCTTGCCAATCAATC", 'AATC')) # [2, 7, 16]
-affiche_gras("GTAATCAAATCTTGCCAATCAATC", 'AATC')  
-    
+
+
+print(recherche_textuelle_naif(
+    "GTAATCAAATCTTGCCAATCAATC", 'AATC'))  # [2, 7, 16]
+affiche_gras("GTAATCAAATCTTGCCAATCAATC", 'AATC')
+
+
 def correspondance(motif, chaine, adroite, p, i):
     # j varie de p-1 à 0 inclus en décroissant
     for j in range(p-1, -1, -1):
@@ -43,5 +44,5 @@ def correspondance(motif, chaine, adroite, p, i):
                 decalage = max(1, j - adroite[x])
             else:
                 decalage = 1
-            return (False , decalage)
+            return (False, decalage)
     return (True, 0)
