@@ -34,3 +34,6 @@ Vu du slicing et du découpage de tableau pour formuler l'algorithme de tri le p
 
 ## 09 - Structures de données relationnels Graphes
 Introduction à la notion de graphe et de matrice pour utiliser des graphes matricielles, introduction des graphes pondérés, continuité informatique du cours de Maths Experts 
+
+## 10 - Recherche textuelle
+Création de l'algorithme reprennant le principe du Ctrl+F
