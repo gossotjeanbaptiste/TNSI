@@ -5,3 +5,9 @@ winget install -e --id Microsoft.VisualStudio.2022.Community.Preview
 winget install -e --id RARLab.WinRAR
 winget install -e --id Spotify.Spotify
 winget install -e --id xanderfrangos.twinkletray
+winget install -e --id OpenJS.NodeJS.LTS
+winget install -e --id Microsoft.WindowsTerminal
+winget install -e --id Microsoft.WindowsPackageManager
+winget install -e --id Microsoft.WindowsSubsystemForLinux
+winget install -e --id Oracle.MySQL
+winget install -e --id TailwindLabs.TailwindCSS

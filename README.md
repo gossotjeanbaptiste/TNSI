@@ -4,9 +4,13 @@
 Cours écrit par [@akbida](https://github.com/akbida)
 Elève qui met en repo github : [GOSSOT Jean-Baptiste](https://github.com/gossotjeanbaptiste) en T05
 
-©JustWirelessInc 2021 - 2025
+Etape à suivre : 
+1) Télécharger et installer Python via [ce lien](https://www.python.org/downloads/) et ne pas oublier de cliquer sur ADD TO PATH à la fin de l'installation
+2) Si vous ne disposez pas de Winget allez le télécharger sur [ce lien](https://aka.ms/getwinget) puis installer le.
+3) Lancer le fichier "prérequis_librairie_python.bat"
+4) Lancer le fichier "prérequis_logiciel_installer.bat"
 
-Dans une optique de faire fonctionner tout les algorithmes merci de lancer "prérequis_librairie_python.bat", cela installera tout les frameworks nécessaire, pour quelques outils pratique ouvrir "prérequis_logiciel_installer.bat"
+©JustWirelessInc 2021 - 2025
 
 Librairie installé : 
 * MàJ de pip
@@ -27,6 +31,12 @@ Logiciel installé :
 * Spotify
 * Git
 * PowerToys
+* NodeJS
+* Windows Subsystem for Linux
+* Windows Terminal
+* Windows Packet Manager
+* MySQL
+* Tailwind CSS
 
 ## 01 - Structure de données : 
 Introduction au Pile et File (la stack), retour sur les listes et les dictionnaires
