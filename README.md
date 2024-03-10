@@ -2,6 +2,7 @@
 ## Année scolaire 2023-2024
 
 Cours écrit par [@akbida](https://github.com/akbida) et certains par [@gossotjeanbaptiste](https://github.com/gossotjeanbaptiste)
+
 Elève qui met en repo github : [GOSSOT Jean-Baptiste](https://github.com/gossotjeanbaptiste) en T05
 
 Etape à suivre : 
