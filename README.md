@@ -6,7 +6,27 @@ Elève qui met en repo github : [GOSSOT Jean-Baptiste](https://github.com/gossot
 
 ©JustWirelessInc 2021 - 2025
 
-Dans une optique de faire fonctionner tout les algorithmes merci de lancer "prérequis.bat", cela installera tout les frameworks nécessaire
+Dans une optique de faire fonctionner tout les algorithmes merci de lancer "prérequis_librairie_python.bat", cela installera tout les frameworks nécessaire, pour quelques outils pratique ouvrir "prérequis_logiciel_installer.bat"
+
+Librairie installé : 
+* MàJ de pip
+* networkx
+* matplotlib
+* jupyter
+* Flask
+* colorama
+* icecream
+* gTTS
+* tkinter
+* pygame
+
+Logiciel installé : 
+* VS Code
+* Visual Studio Community 2022
+* Twinkle Tray
+* Spotify
+* Git
+* PowerToys
 
 ## 01 - Structure de données : 
 Introduction au Pile et File (la stack), retour sur les listes et les dictionnaires
