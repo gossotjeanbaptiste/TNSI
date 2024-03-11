@@ -68,3 +68,8 @@ Introduction à la notion de graphe et de matrice pour utiliser des graphes matr
 
 ## 10 - Recherche textuelle
 Création de l'algorithme reprennant le principe du Ctrl+F
+
+
+## 11 - Programmation dynamique
+Ne pas refaire des calculs que l'on à déjà fait
+Ex de la suite de Fibonnaci
