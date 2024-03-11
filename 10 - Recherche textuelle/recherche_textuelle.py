@@ -30,15 +30,15 @@ def affiche_gras(chaine, motif):
             i += 1
 
 
-print(recherche_textuelle_naif(
-    "GTAATCAAATCTTGCCAATCAATC", 'AATC'))  # [2, 7, 16]
-affiche_gras("GTAATCAAATCTTGCCAATCAATC", 'AATC')
+#print(recherche_textuelle_naif(
+#    "GTAATCAAATCTTGCCAATCAATC", 'AATC'))  # [2, 7, 16]
+#affiche_gras("GTAATCAAATCTTGCCAATCAATC", 'AATC')
 
 
 def correspondance(motif, chaine, adroite, p, i):
     # j varie de p-1 à 0 inclus en décroissant
     for j in range(p-1, -1, -1):
-        x = motif[i+j]
+        x = chaine[i+j]
         if x != motif[j]:
             if x in adroite.keys():
                 decalage = max(1, j - adroite[x])
@@ -46,3 +46,24 @@ def correspondance(motif, chaine, adroite, p, i):
                 decalage = 1
             return (False, decalage)
     return (True, 0)
+
+def boyer_moore(motif, chaine):
+    adroite = {}
+    for indice, lettre in enumerate(motif):
+        adroite[lettre] = indice
+    resultat = []
+    n = len(chaine)
+    p = len(motif)
+    i = 0
+    while i < n - p:
+        ok, decalage = correspondance(motif, chaine, adroite, p, i)
+        if ok:
+            resultat.append(i)
+            i += p
+        else:
+            i += decalage
+    return resultat
+
+print(boyer_moore("AATC", "GTAATCAAATCTTGCCAATCAATC"))  # [2, 7, 16]
+
+print(recherche_textuelle_naif("GTAATCAAATCTTGCCAATCAATC", "AATC"))  # [2, 7, 16]
