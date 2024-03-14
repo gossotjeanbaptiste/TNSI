@@ -24,4 +24,5 @@ WSL -> Windows Subsystem for Linux
 3) Redemarrer votre PC
 4) Dans le panneau chercher le fichier "Sous système Windows pour Linux" en français ou "Windows Subsystme for Linux"
 5) Redemarrer votre PC
-6) Vous avez une commande Ubuntu sur Windows bien jouer (C: -> /mnt/C)
+6) Créer votre utilisateur et votre mot de passe pour Ubuntu
+7) Bien jouer vous avez une ligne de commande Linux installer
