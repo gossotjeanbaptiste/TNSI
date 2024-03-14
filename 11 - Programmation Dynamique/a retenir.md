@@ -1,0 +1,2 @@
+1) Qqchose qui dépends de plusieurs sous problèmes
+2) Pour eviter de faire trop de calculs (et des calculs inutiles) on va essayer d'une façon ou d'une autre de ne pas les faire deux fois ou de les mémorisés
