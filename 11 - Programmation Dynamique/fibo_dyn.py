@@ -18,6 +18,7 @@ def fib_rec_dyn(n, cpt = 0):
     return fibocache[str(n)]
 
 def update_json():
+    # ! update json file
     with open('fibo.json','w+') as json_file:
         json.dump(fibocache, json_file)
 
