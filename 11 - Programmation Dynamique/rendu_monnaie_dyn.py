@@ -14,5 +14,6 @@ def rendu_rec_dyn(P, somme):
         dico_rendu[somme] = minimum
         return minimum
 
+
 print(rendu_rec_dyn([10, 5, 2], 11))
 print(rendu_rec_dyn([10, 5, 2], 72))
