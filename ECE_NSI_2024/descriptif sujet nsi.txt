@@ -1,0 +1,11 @@
+Sujet 8 
+delta 
+parcours profondeur infixe
+
+Sujet 9 :
+Tri par ordre croissant de note
+decimal à binaire et binaire à decimal
+
+Sujet 10 : 
+calcul de moyenne
+travail sur un dessin de coeur
