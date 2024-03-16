@@ -1,7 +1,7 @@
 dico_rendu = {0: 0}
 
 
-def rendu_rec_dyn(P, somme):
+def rendu_rec_dyn(P: list, somme: int) -> int:
     if somme in dico_rendu.keys():
         return dico_rendu[somme]
     else:
