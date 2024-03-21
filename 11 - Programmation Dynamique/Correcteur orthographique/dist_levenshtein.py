@@ -27,8 +27,6 @@ def levenshtein(chaine1: str, chaine2: str) -> int:
     d = [[j for j in range(n2+1)] for i in range(n1+1)]
     for i in range(n1+1):
         d[i][0] = i
-    for j in range(n2+1):
-        d[0][j] = j
     for i in range(1, n1+1):  # Modification ici
         for j in range(1, n2+1):  # Modification ici
             c = 0 if chaine1[i-1] == chaine2[j-1] else 1
