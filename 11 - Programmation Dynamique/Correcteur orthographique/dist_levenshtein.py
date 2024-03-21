@@ -29,10 +29,10 @@ def levenshtein(chaine1: str, chaine2: str) -> int:
         d[i][0] = i
     for j in range(n2+1):
         d[0][j] = j
-    for i in range(1, n1):
-        for j in range(1, n2):
-            c = 0 if chaine1[i] == chaine2[j] else 1
-            d[i][j] = (min(d[i-1][j]+1, d[i][j-1]+1, d[i-1][j-1]+c))
+    for i in range(1, n1+1):  # Modification ici
+        for j in range(1, n2+1):  # Modification ici
+            c = 0 if chaine1[i-1] == chaine2[j-1] else 1
+            d[i][j] = min(d[i-1][j] + 1, d[i][j-1] + 1, d[i-1][j-1] + c)
     return d[n1][n2]
 
 
