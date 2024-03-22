@@ -85,5 +85,4 @@ Création de l'algorithme reprennant le principe du Ctrl+F
 
 ## 11 - Programmation dynamique
 
-Ne pas refaire des calculs que l'on à déjà fait
-Ex de la suite de Fibonnaci
+Technique qui permet de ne pas refaire des calculs
