@@ -10,3 +10,4 @@ Quand utiliser la programmation dynamique ?
 
 ### Principe de la programation dynamique
 Eviter de refaire deux fois ou plus un même calculs, grâce a de la mémorisation (mise en cache des calculs)
+Vrai terme : Memoïsation -> Memoization en anglais (mémorisation en français)
