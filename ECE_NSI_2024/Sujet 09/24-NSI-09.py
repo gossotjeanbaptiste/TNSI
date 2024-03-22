@@ -60,7 +60,8 @@ def bin_to_dec(nb_bin):
         return bit_droit + 2 * bin_to_dec(nb_bin[:-1])
 
 
-assert bin_to_dec('101010') == 42, "Test 2"
+assert bin_to_dec('101010') == 42 and bin_to_dec('11001') == 25, "Test 2"
 print('Test 2 : ok')
 print(bin_to_dec('101010'))  # 42
+print(bin_to_dec('11001'))
 print('----------------------------')
