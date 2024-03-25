@@ -89,3 +89,9 @@ Technique qui permet de ne pas refaire des calculs
 ## 12 - Cryptographie & Sécurisation des communications
 
 Introduction à la cryptographie, les clés, les algorithmes de chiffrement, les attaques, les protocoles de sécurisation des communications
+
+Principe :
+
+1) Doit etre mathématiquement indéchiffrable
+2) Méthode de chiffrement doit être connu de l'expéditeur et du destinataire
+3) La clé doit être connu que de l'expéditeur et du destinataire (clé simple à retenir)
