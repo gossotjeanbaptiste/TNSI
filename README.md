@@ -39,9 +39,8 @@ Logiciel installé :
 * NodeJS
 * Windows Subsystem for Linux
 * Windows Terminal
-* Windows Packet Manager
 * MySQL
-* Tailwind CSS
+* Wintoys
 
 ## 01 - Structure de données
 
@@ -86,3 +85,7 @@ Création de l'algorithme reprennant le principe du Ctrl+F
 ## 11 - Programmation dynamique
 
 Technique qui permet de ne pas refaire des calculs
+
+## 12 - Cryptographie & Sécurisation des communications
+
+Introduction à la cryptographie, les clés, les algorithmes de chiffrement, les attaques, les protocoles de sécurisation des communications
