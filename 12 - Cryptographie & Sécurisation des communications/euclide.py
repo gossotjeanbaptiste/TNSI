@@ -6,9 +6,14 @@ def pgcd(n1, n2):  # plus grand diviseur commun algo d'euclide
     else:
         return pgcd(n2, reste)
 
+
 def euclide_etendu(a, b):
-    r, u, v, r1, u1, v1 = a, 1, 0, b, 0, 1
-    while r1 != 0:
-        q = r // r1
-        r, u, v, r1, u1, v1 = r1, u1, v1, r - q * r1, u - q * u1, v - q * v1
-    return r, u, v
+    if b == 0:
+        return (1, 0)
+    else:
+        x, y = euclide_etendu(b, a % b)
+        return (y, x - (a // b) * y)
+
+
+print(euclide_etendu(7, 432))
+print(pgcd(7, 432))
