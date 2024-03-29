@@ -37,18 +37,6 @@ def affine(chaine: str, a: int, b: int) -> str:
             resultat += lettre
     return resultat
 
-def dechiffre_affine(chaine: str, a: int, b: int) -> str:
-    resultat = ""
-    for lettre in chaine:
-        if 97 <= ord(lettre) <= 122:
-            resultat += chr((a * (ord(lettre) - 97) - b) % 26 + 97)
-        elif 65 <= ord(lettre) <= 90:
-            resultat += chr((a * (ord(lettre) - 65) - b) % 26 + 65)
-        else:
-            resultat += lettre
-    return resultat
-    #return affine(chaine, 1 // a, -b // a)
-    
 
 def inv_modulaire_bf(a: int) -> int:
     # ! Principe Inverse Modulaire
@@ -57,6 +45,18 @@ def inv_modulaire_bf(a: int) -> int:
         if (a * i) % 26 == 1:
             return i
     return -1
+
+def dechiffre_affine(chaine: str, a: int, b: int) -> str:
+    resultat = ""
+    for lettre in chaine:
+        if 97 <= ord(lettre) <= 122:
+            resultat += chr(inv_modulaire_bf(a) * ((ord(lettre) - 97) - b) % 26 + 97)
+        elif 65 <= ord(lettre) <= 90:
+            resultat += chr(inv_modulaire_bf(a) * ((ord(lettre) - 65) - b) % 26 + 65)
+        else:
+            resultat += lettre
+    return resultat
+    #return affine(chaine, 1 // a, -b // a)
 
 
 def vigenere(chaine: str, cle: str) -> str:
@@ -76,3 +76,6 @@ def vigenere(chaine: str, cle: str) -> str:
         else:
             resultat += lettre
     return resultat
+
+
+print(vigenere("TERMINALE", "NSI"))
