@@ -1,7 +1,7 @@
 import socket
 import threading
 
-host = '0.0.0.0'
+host = 'localhost'
 port = 5555
 
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -47,3 +47,10 @@ def connexions():
 
         print(f'SERVEUR : Nouvel utilisateur {pseudo} connecte')
         diffuser(f'SERVEUR : {pseudo} a rejoint le chat'.encode('utf-8'))
+        thread = threading.Thread(target=gestion, args=(client,))
+        # Creation d'un thread ayant pour cible notre fonction gestion
+        thread.start()
+        # Lancement du thread
+
+
+connexions()
