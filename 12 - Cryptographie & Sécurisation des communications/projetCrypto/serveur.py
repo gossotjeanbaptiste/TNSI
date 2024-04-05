@@ -1,7 +1,7 @@
 import socket
 import threading
 
-host = 'localhost' #a modifier si nécessaire
+host = 'localhost'  # a modifier si nécessaire
 port = 5555
 
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -13,9 +13,10 @@ pseudos = []
 
 
 def diffuser(message, client_envoyeur=None):
-    for personne in clients:  # Parcours de tous les client
-        if personne == client_envoyeur:  # Verification, on envoie que si ce n'est pas le client envoyeur
-            clients.send(message)
+    for client in clients:  # Parcours de tous les client
+        if client != client_envoyeur:  # Verification, on envoie que si ce n'est pas le client envoyeur
+            pseudo = pseudos[clients]
+            client.send(f'{pseudo} : {message}'.encode('utf-8'))
 
 
 def gestion(client):

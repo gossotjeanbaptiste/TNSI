@@ -3,7 +3,7 @@ import threading
 from chiffre import *
 
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-client.connect(('192.168.1.54', 5555))  # modifier l'adresse ip
+client.connect(('192.168.91.249', 5555))  # modifier l'adresse ip
 
 pseudo = input('Entrez votre pseudo : ')
 
