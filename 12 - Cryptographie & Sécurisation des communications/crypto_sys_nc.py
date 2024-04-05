@@ -103,7 +103,7 @@ def de_viginere(chaine: str, cle: str) -> str:
     return resultat
 
 
-def xor_encrypt_decrypt(message, key):
+def xor_encrypt_decrypt(message:str, key:str)->str:
     encrypted = ""
     for i in range(len(message)):
         encrypted += chr(ord(message[i]) ^ ord(key[i % len(key)]))
