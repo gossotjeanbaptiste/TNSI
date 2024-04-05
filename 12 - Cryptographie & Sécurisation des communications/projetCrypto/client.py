@@ -1,36 +1,31 @@
 import socket
 import threading
-from chiffre import *
+
+pseudo = input("Pseudo ? : ")
 
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-client.connect(('192.168.91.249', 5555))  # modifier l'adresse ip
+client.connect(('127.0.0.1', 5555))
 
-pseudo = input('Entrez votre pseudo : ')
-
+# première connexion, on envoie le pseudo
 client.send(pseudo.encode('utf-8'))
-
 
 def envoyer(message):
     client.send(message.encode('utf-8'))
 
-
 def ecrire():
-    while True:  # faire tourner la demande a l'infinie
-        # demander a l'utilisateur son message
-        message = input('Votre message : ')
-        envoyer(message)  # envoyer le message
-
+    while True:
+        message = input("")
+        envoyer(message)
 
 def recevoir():
     while True:
         message = client.recv(1024).decode('utf-8')
         if 'SERVEUR' in message:
             print("\n")
-            print("Message du serveur :\n")
             print(message)
             print("\n")
         else:
-            print(message)
+            print(message, 13)
 
 
 receive_thread = threading.Thread(target=recevoir)
