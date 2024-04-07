@@ -11,7 +11,7 @@ print()
 def factorielle(n):
     fact = 1
     for nb in range(1, n+1):
-        fact *= nb
+        fact *= nb # ! fact = fact * nb 
     return fact
 
 
