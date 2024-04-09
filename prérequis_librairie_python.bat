@@ -6,5 +6,5 @@ pip install Flask
 pip install colorama
 pip install icecream
 pip install gTTS
-pip install tkinter
+pip install tk
 pip install primePy
