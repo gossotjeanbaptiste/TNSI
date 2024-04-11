@@ -15,7 +15,14 @@ def pgcd(a, b):
 
 
 def lame_lucas(a, n):
-    """renvoie l'inverse de a modulo n """
+    """
+    Renvoie l'inverse de a modulo n.
+    Args:
+        a (int): Le nombre dont on souhaite calculer l'inverse modulo n.
+        n (int): Le modulo.
+    Returns:
+        int: L'inverse de a modulo n.
+    """
     mat = [[n, 1, 0],
            [a, 0, 1]]
     i = 2
@@ -47,6 +54,15 @@ def generate_e(n):
 
 
 def get_cle_publique_prive(len_cle=3):
+    """
+    Generates a pair of public and private keys for RSA encryption.
+    Parameters:
+        len_cle (int): The length of the prime numbers used to generate the keys.
+    Returns:
+        dict: A dictionary containing the public and private keys.
+            The public key is represented as a tuple (n, e),
+            and the private key is represented as an integer d.
+    """
     liste_premiers = primes.between(10**(len_cle-1), 10**(len_cle) - 1)
     p, q = choices(liste_premiers, k=2)
     n = p * q
