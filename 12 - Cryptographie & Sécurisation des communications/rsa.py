@@ -1,4 +1,5 @@
-from random import randint
+from random import randint, choices
+from primePy import primes
 # Description: Implémentation de l'algorithme RSA
 
 
@@ -45,10 +46,9 @@ def generate_e(n):
     return e
 
 
-def get_cle_publique_prive():
-    p = 89
-    q = 37
-    print(f"p = {p}, q = {q}")
+def get_cle_publique_prive(len_cle=3):
+    liste_premiers = primes.between(10**(len_cle-1), 10**(len_cle) - 1)
+    p, q = choices(liste_premiers, k=2)
     n = p * q
     phi_n = (p-1)*(q-1)
     e = generate_e(phi_n)
