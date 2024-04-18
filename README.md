@@ -95,3 +95,8 @@ Principe :
 1) Doit etre mathématiquement indéchiffrable
 2) Méthode de chiffrement doit être connu de l'expéditeur et du destinataire
 3) La clé doit être connu que de l'expéditeur et du destinataire (clé simple à retenir)
+
+## 13 - Calculabilité
+
+Calculer sur les programmes
+Utilisation du language Assembleur (celui le plus proche de la machine)
