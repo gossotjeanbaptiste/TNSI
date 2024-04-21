@@ -7,4 +7,5 @@ pip install colorama
 pip install icecream
 pip install gTTS
 pip install tk
+pip install ctk
 pip install primePy
