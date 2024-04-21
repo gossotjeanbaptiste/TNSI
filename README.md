@@ -25,7 +25,8 @@ Librairie installé :
 * colorama
 * icecream
 * gTTS
-* tkinter
+* TKinter
+* Custom TKinter
 * pygame
 
 Logiciel installé :
