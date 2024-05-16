@@ -8,5 +8,6 @@ winget install -e --id xanderfrangos.twinkletray
 winget install -e --id OpenJS.NodeJS.LTS
 winget install -e --id Microsoft.WindowsTerminal
 winget install -e --id Microsoft.WindowsSubsystemForLinux
+winget install -e --id Canonical.Ubuntu.2204
 winget install -e --id Oracle.MySQL
 winget install Wintoys -s msstore
