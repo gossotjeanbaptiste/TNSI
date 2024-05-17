@@ -6,10 +6,7 @@ binaire et qui renvoie la liste des étiquettes des nœuds de l’arbre parcouru
 from collections import deque
 
 
-from collections import deque
-
-
-def parcours_largeur(arbre, file=None, resultat=None):
+def parcours_largeur1(arbre, file=None, resultat=None):
     """
     Perform a breadth-first traversal of a binary tree.
 
@@ -34,13 +31,27 @@ def parcours_largeur(arbre, file=None, resultat=None):
         file.append(noeud[0])
     if noeud[2] is not None:
         file.append(noeud[2])
-    return parcours_largeur(arbre, file, resultat)
+    return parcours_largeur1(arbre, file, resultat)
 
 
 arbre = (((None, 1, None), 2, (None, 3, None)),
          4, ((None, 5, None), 6, (None, 7, None)))
 
-print(parcours_largeur(arbre))  # * à obtenir [4, 2, 6, 1, 3, 5, 7]
+print(parcours_largeur1(arbre))  # * à obtenir [4, 2, 6, 1, 3, 5, 7]
+
+
+# ! a savoir refaire les algos de parcours d'arbre en infixe/suffixe/préfixe et largeur
+def parcours_largeur2(arbre):
+    file = [arbre]
+    liste_valeurs = []
+    while file:
+        temp = file.pop(0)
+        liste_valeurs.append(temp[1])
+        if not (temp[0] == None):
+            file.append(temp[0])
+        if not (temp[2] == None):
+            file.append(temp[2])
+    return liste_valeurs
 
 
 # * Ex2:
