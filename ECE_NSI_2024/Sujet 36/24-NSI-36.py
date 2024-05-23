@@ -1,6 +1,6 @@
 # * Ex 1
 
-def occurences(lettre: str, mot: str) -> int:
+def occurrences(lettre: str, mot: str) -> int:
     conte_lettre = 0
     if len(lettre) == 0 or len(mot) == 0:
         return conte_lettre
@@ -10,6 +10,10 @@ def occurences(lettre: str, mot: str) -> int:
         if mot[l] == lettre:
             conte_lettre += 1
     return conte_lettre
+
+print(occurrences('e', 'sciences'))
+print(occurrences('i', "mississippi"))
+print(occurrences('a', "mississippi"))
 
 
 # * Ex 2
@@ -21,6 +25,11 @@ def rendu_glouton(a_rendre: int, rang: int) -> list[int]:
         return []
     v = valeurs[rang]
     if v <= a_rendre:
-        return 1 + rendu_glouton(a_rendre - v, rang)
+        return [v] + rendu_glouton(a_rendre - v, rang)
     else:
         return rendu_glouton(a_rendre, rang + 1)
+
+
+print(rendu_glouton(67, 0))
+print(rendu_glouton(291, 0))
+print(rendu_glouton(291, 1))
