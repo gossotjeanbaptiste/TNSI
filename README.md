@@ -23,7 +23,7 @@ Si durant l'installation de Python vous avez oubliez de l'ajoutez au PATH suivez
 7) ATTENTION NE SUPPRIMEZ AUCUNE VARIABLES OU LIGNE INTEGRER AU RISQUE DE CASSER QQCHOSE MISE A PART SI VOUS SAVEZ CE QUE VOUS FAITES !
 8) Cliquez sur `OK` pour tout refermer
 9) Rédemarrer votre PC
-10) Vérifié que Python est bien détecté depuis n'importe où, ouvrez une ligne de commande et faite la commande `py -v` si c'est le cas cela devrait vous affichez quelque chose dans ce style `Python <version> (tags/v<version>:<qqchose de quelconque>, <Date> , <heure>) [MSC v.1937 64 bit (AMD64)] on win32` avec ceci `>>>`, si ce n'est pas le cas il devrait afficher ceci `'py' n’est pas reconnu en tant que commande interne ou externe, un programme exécutable ou un fichier de commandes.`, si c'est le cas revoyez toutes vos étapes  
+10) Vérifié que Python est bien détecté depuis n'importe où, ouvrez une ligne de commande et faite la commande `py -v` si c'est le cas cela devrait vous affichez quelque chose dans ce style `Python v<version> (tags/v<version>:<qqchose de quelconque>, <Date> , <heure>) [MSC v.1937 64 bit (AMD64)] on win32` avec ceci `>>>`, si ce n'est pas le cas il devrait afficher ceci `'py' n’est pas reconnu en tant que commande interne ou externe, un programme exécutable ou un fichier de commandes.`, si c'est le cas revoyez toutes vos étapes  
 
 ©JustWirelessInc 2021 - 2025
 
