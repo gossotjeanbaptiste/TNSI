@@ -39,7 +39,7 @@ Librairie installé :
 * `gTTS`
 * `TKinter`
 * `Custom TKinter`
-* `pygame`
+* `primePy`
 
 Logiciel installé :
 
