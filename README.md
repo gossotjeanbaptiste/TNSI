@@ -29,17 +29,17 @@ Si durant l'installation de Python vous avez oubliez de l'ajoutez au PATH suivez
 
 Librairie installé :
 
-* MàJ de pip
-* networkx
-* matplotlib
-* jupyter
-* Flask
-* colorama
-* icecream
-* gTTS
-* TKinter
-* Custom TKinter
-* pygame
+* MàJ de `pip`
+* `networkx`
+* `matplotlib`
+* `jupyter`
+* `Flask`
+* `colorama`
+* `icecream`
+* `gTTS`
+* `TKinter`
+* `Custom TKinter`
+* `pygame`
 
 Logiciel installé :
 
