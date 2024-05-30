@@ -13,6 +13,18 @@ Etape à suivre :
 3) Lancer le fichier "prérequis_librairie_python.bat"
 4) Lancer le fichier "prérequis_logiciel_installer.bat"
 
+Si durant l'installation de Python vous avez oubliez de l'ajoutez au PATH suivez cette méthode : 
+1) Chercher `Modifier les variables d'environnement système`
+2) Cliquer sur `Variables d'environnement...`
+3) Double cliquer sur `Path` dans `Variables utilisateur pour <votre utilisateur>` 
+4) Cliquez sur `Nouveau` et ajoutez `C:\Users\<votre utilisateur>\AppData\Local\Programs\Python\Python<Version>\Scripts\`
+5) De même refaite la même chose comme ceci `C:\Users\<votre utilisateur>\AppData\Local\Programs\Python\Python<Version>\`
+6) Refaites les trois étapes précédentes dans le `Path` du `Variables système`
+7) ATTENTION NE SUPPRIMEZ AUCUNE VARIABLES OU LIGNE INTEGRER AU RISQUE DE CASSER QQCHOSE MISE A PART SI VOUS SAVEZ CE QUE VOUS FAITES !
+8) Cliquez sur `OK` pour tout refermer
+9) Rédemarrer votre PC
+10) Vérifié que Python est bien détecté depuis n'importe où, ouvrez une ligne de commande et faite la commande `py -v` si c'est le cas cela devrait vous affichez quelque chose dans ce style `Python <version> (tags/v<version>:<qqchose de quelconque>, <Date> , <heure>) [MSC v.1937 64 bit (AMD64)] on win32` avec ceci `>>>`, si ce n'est pas le cas il devrait afficher ceci `'py' n’est pas reconnu en tant que commande interne ou externe, un programme exécutable ou un fichier de commandes.`, si c'est le cas revoyez toutes vos étapes  
+
 ©JustWirelessInc 2021 - 2025
 
 Librairie installé :
