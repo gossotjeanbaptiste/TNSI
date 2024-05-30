@@ -32,6 +32,9 @@ Comment activer la virtualisation sur les PC Grand Est
 12) Sortez du BIOS en faisant "Save changes and exit"
 
 ---
+
+Comment activer les Sous-système Windows pour Linux (WSL)
+
 1) Rechercher "Fonctionnalités" -> "Activer ou désactiver des fonctionnalités Windows"
 2) Dans le panneau chercher le fichier "Sous système Windows pour Linux" en français ou "Windows Subsystme for Linux"
 4) Redemarrer votre PC
