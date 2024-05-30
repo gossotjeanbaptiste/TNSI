@@ -114,6 +114,6 @@ Principe :
 Calculer sur les programmes
 Utilisation du language Assembleur (celui le plus proche de la machine)
 
-## 14 SoC (System on Chip) 
+## - 14 SoC (System on Chip) 
 
 Introduction au notion de RAM, CPU, Carte Mère etc...
