@@ -1,3 +1,15 @@
+def maximum_tableau(tab):
+    """Renvoie le maximum d'un tableau tab."""
+    max = tab[0]
+    for i in range(1, len(tab)):
+        if tab[i] > max:
+            max = tab[i]
+    return max
+
+print(maximum_tableau([98, 12, 104, 23, 131, 9]))
+print(maximum_tableau([-27, 24, -3, 15]))
+
+
 class Pile:
     """Classe définissant une structure de pile."""
     def __init__(self):
@@ -24,13 +36,18 @@ def bon_parenthesage(ch):
     est bien parenthésée"""
     p = Pile()
     for c in ch:
-        if c == ...: 
+        if c == '(': 
             p.empiler(c)
-        elif c == ...: 
+        elif c == ')': 
             if p.est_vide():
-                ...
+                return False
             else:
-                ...
-    return ... 
+                p.depiler()
+    return p.est_vide()
+
+print(bon_parenthesage("((()())(()))"))
+print(bon_parenthesage("())(()"))
+print(bon_parenthesage("(())(()"))
+
 
 
