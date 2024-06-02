@@ -1,4 +1,5 @@
 # Exercice 1
+from random import randint
 
 def lancer(n):
     resultat = []
@@ -12,7 +13,7 @@ def paire_6(tab):
     for i in tab:
         if i ==6:
             occ += 1
-    return oc >= 2
+    return occ >= 2
 
 
 # Exercice 2 - Sujet
