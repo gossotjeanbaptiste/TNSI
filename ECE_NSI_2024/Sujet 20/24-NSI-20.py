@@ -20,11 +20,11 @@ def paire_6(tab):
 
 def nombre_lignes(image):
     '''renvoie le nombre de lignes de l'image'''
-    return ... 
+    return len(image)
 
 def nombre_colonnes(image):
     '''renvoie la largeur de l'image'''
-    return ... 
+    return len(image[0])
 
 def negatif(image):
     '''renvoie le negatif de l'image sous la forme
@@ -35,8 +35,8 @@ def negatif(image):
          for i in range(nombre_lignes(image))]
 
     for i in range(nombre_lignes(image)):
-        for j in range(...): 
-            nouvelle_image[i][j] = ... 
+        for j in range(nombre_colonnes(image)): 
+            nouvelle_image[i][j] = 255 - image[i][j]
     return nouvelle_image
 
 def binaire(image, seuil):
@@ -47,11 +47,11 @@ def binaire(image, seuil):
                       for i in range(nombre_lignes(image))]
 
     for i in range(nombre_lignes(image)):
-        for j in range(...): 
-            if image[i][j] < ... : 
-                nouvelle_image[i][j] = ... 
+        for j in range(nombre_colonnes(image)): 
+            if image[i][j] < seuil : 
+                nouvelle_image[i][j] = 0 
             else:
-                nouvelle_image[i][j] = ... 
+                nouvelle_image[i][j] = 1 
     return nouvelle_image
 
 
