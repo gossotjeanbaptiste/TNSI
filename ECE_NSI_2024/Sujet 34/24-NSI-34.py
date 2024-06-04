@@ -1,3 +1,14 @@
+def nbr_occurences(chaine):
+    dico = {}
+    for i in range(len(chaine)):
+        if chaine[i] not in dico:
+            dico[chaine[i]] = 1
+        else:
+            dico[chaine[i]] += 1
+    return dico
+
+print(nbr_occurences('Hello world !'))
+
 def fusion(tab1,tab2):
     '''Fusionne deux tableaux triés et renvoie
     le nouveau tableau trié.'''
@@ -7,22 +18,25 @@ def fusion(tab1,tab2):
     i1 = 0
     i2 = 0
     i = 0
-    while i1 < n1 and ...: 
+    while i1 < n1 and i2 < n2: 
         if tab1[i1] < tab2[i2]:
-            tab12[i] = ... 
-            i1 = ... 
+            tab12[i] = tab1[i1] 
+            i1 = i1 + 1 
         else:
             tab12[i] = tab2[i2]
-            i2 = ... 
+            i2 = i2 + 1 
         i += 1
     while i1 < n1:
-        tab12[i] = ... 
+        tab12[i] = tab1[i1] 
         i1 = i1 + 1
-        i = ... 
+        i = i + 1 
     while i2 < n2:
-        tab12[i] = ... 
+        tab12[i] = tab2[i2] 
         i2 = i2 + 1
-        i = ... 
+        i = i + 1 
     return tab12
 
+print(fusion([1, 2, 3], []))
+print(fusion([], []))
+print(fusion([1, 6, 10], [0, 7, 8, 9]))
 
