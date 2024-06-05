@@ -1,3 +1,17 @@
+def enumere(list):
+    '''Écrire une fonction enumere qui prend en paramètre un tableau tab (type list) et renvoie
+    un dictionnaire d dont les clés sont les éléments de tab avec pour valeur associée la liste
+    des indices de l’élément dans le tableau tab'''
+    d = {}
+    for i in range(len(list)):
+        if list[i] in d:
+            d[list[i]].append(i)
+        else:
+            d[list[i]] = [i]
+    return d
+
+
+
 class Noeud:
     """Classe représentant un noeud d'un arbre binaire"""
     def __init__(self, etiquette, gauche, droit):
@@ -23,10 +37,10 @@ def insere(arbre, cle):
     if arbre == None:
         return Noeud(cle, None, None) # creation d'une feuille
     else:
-        if ...: 
+        if cle < arbre.etiquette: 
             arbre.gauche = insere(arbre.gauche, cle)
         else:
-            arbre.droit = ... 
+            arbre.droit = insere(arbre.droit, cle) 
         return arbre
 
 
