@@ -1,8 +1,12 @@
 # Cours résumé sur les SoC (System on Chip)
 
+---
+
 ## Qu'est-ce qu'un SoC ?
 
 Un SoC (System on Chip) est un circuit intégré qui intègre tous les composants nécessaires pour exécuter un système informatique complet sur une seule puce. Il combine généralement un ou plusieurs processeurs, de la mémoire, des interfaces de communication, des périphériques d'entrée/sortie et d'autres composants essentiels.
+
+---
 
 ## Avantages des SoC
 
@@ -16,6 +20,8 @@ Les SoC offrent plusieurs avantages par rapport aux systèmes traditionnels bas�
 
 - **Performances améliorées** : En intégrant des composants spécifiques et en permettant une meilleure communication entre eux, les SoC offrent des performances améliorées par rapport aux systèmes basés sur des composants séparés.
 
+---
+
 ## Utilisations des SoC
 
 Les SoC sont utilisés dans de nombreux domaines, tels que :
@@ -27,6 +33,8 @@ Les SoC sont utilisés dans de nombreux domaines, tels que :
 - **Automobile** : Les SoC sont utilisés dans les systèmes de navigation, les tableaux de bord, les systèmes de divertissement, etc.
 
 - **Internet des objets (IoT)** : Les SoC sont utilisés dans les appareils connectés, tels que les capteurs, les thermostats intelligents, les caméras de sécurité, etc.
+
+---
 
 ## Conclusion
 

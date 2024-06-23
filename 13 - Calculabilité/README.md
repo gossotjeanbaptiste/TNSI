@@ -1,3 +1,6 @@
+# Important de savoir sur la calculabilité des algorithmes
+---
+ 
  **La calculabilité des algorithmes** est un domaine de l'informatique qui étudie les limites de ce qui peut être calculé par des machines. Principaux points :
   - Explore si un problème peut être **résolu par un algorithme** et comment le faire efficacement.
   - Repose sur le concept de **machine de Turing**, un modèle abstrait de calcul capable de lire, écrire, et se déplacer sur une bande infinie, et de changer d'état selon les instructions.
