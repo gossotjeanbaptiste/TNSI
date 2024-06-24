@@ -13,8 +13,8 @@
 
 1. Ouvrez Git Bash
 2. Tapez la commande en 2.1 ou 2.2
-2. 1. `ssh-keygen -t ed25519 -C "your_email@example.com"`
-2. 2. `ssh-keygen -t rsa -b 4096 -C "your_email@example.com"`
+ 1. `ssh-keygen -t ed25519 -C "your_email@example.com"`
+ 2. `ssh-keygen -t rsa -b 4096 -C "your_email@example.com"`
 3. Appuyez sur `Entrée` pour accepter le chemin par défaut
 4. Entrez un mot de passe sécurisé (optionnel) et retapez-le pour confirmer (si vide alors appuyez deux fois sur `Entrée`)
 5. Vous avez généré une clé SSH
